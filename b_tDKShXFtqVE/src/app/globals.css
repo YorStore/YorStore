@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand-navy:      #0B2454;
+    --brand-blue:      #1A4FA0;
+    --brand-blue-mid:  #2B6CC4;
+    --brand-blue-lt:   #DAEAF8;
+    --brand-blue-xlt:  #F0F7FD;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    @apply text-slate-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+
+  p, li, label, input, textarea, button, a {
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-blue text-white font-semibold
+           px-6 py-3 rounded-xl text-sm
+           hover:bg-[#143d7a]
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-brand-blue focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-transparent text-white font-semibold
+           border-2 border-white/60
+           px-6 py-3 rounded-xl text-sm
+           hover:bg-white hover:text-brand-navy
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-white;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-brand-blue font-semibold
+           border-2 border-brand-blue
+           px-6 py-3 rounded-xl text-sm
+           hover:bg-brand-blue hover:text-white
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-brand-blue focus-visible:ring-offset-2;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-brand-navy font-bold
+           px-6 py-3 rounded-xl text-sm
+           hover:bg-brand-blue-lt
+           transition-colors duration-200
+           focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-white;
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-slate-200 bg-white
+           px-4 py-3 text-sm text-slate-800 placeholder-slate-400
+           focus:outline-none focus:ring-2 focus:ring-brand-blue
+           focus:border-transparent transition duration-150;
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .section-pad-sm {
+    @apply py-10 md:py-16;
+  }
+
+  .container-site {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border border-slate-100 shadow-sm p-6 md:p-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-widest;
+  }
+}
+
+@layer utilities {
+  .text-brand-navy   { color: var(--brand-navy); }
+  .text-brand-blue   { color: var(--brand-blue); }
+  .bg-brand-navy     { background-color: var(--brand-navy); }
+  .bg-brand-blue     { background-color: var(--brand-blue); }
+  .bg-brand-blue-lt  { background-color: var(--brand-blue-lt); }
+  .bg-brand-blue-xlt { background-color: var(--brand-blue-xlt); }
+  .border-brand-blue { border-color: var(--brand-blue); }
+}
