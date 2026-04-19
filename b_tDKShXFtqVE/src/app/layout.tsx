@@ -4,6 +4,7 @@ import "./globals.css";
 import { SITE_CONFIG } from "@/lib/config";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
   description: SITE_CONFIG.description,
   openGraph: {
     siteName: SITE_CONFIG.businessName,
-    locale:   "en_GB",
-    type:     "website",
+    locale: "en_GB",
+    type: "website",
   },
 };
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );
