@@ -27,17 +27,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-3 md:py-4">
 
         {/* Logo */}
-<div className="flex items-center justify-center w-52 flex-shrink-0">
-  <Link href="/" className="group" aria-label="YORSTORE home">
-    <Image
-      src="/logo.png"
-      alt="YORSTORE"
-      width={220}
-      height={66}
-      className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
-      priority
-    />
-  </Link>
+<Link href="/" className="flex-shrink-0 group -ml-3" aria-label="YORSTORE home">
+  <Image
+    src="/logo.png"
+    alt="YORSTORE"
+    width={220}
+    height={66}
+    className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
+    priority
+  />
+</Link>
 </div>
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
