@@ -26,18 +26,19 @@ export default function Navbar() {
       <div className="container-site">
         <div className="flex items-center justify-between py-3 md:py-4">
 
-          {/* Logo */}
-          <Link href="/" className="flex-shrink-0 group" aria-label="YORSTORE home">
-            <Image
-              src="/logo.png"
-              alt="YORSTORE"
-              width={200}
-              height={60}
-              className="h-12 md:h-14 w-auto group-hover:opacity-90 transition-opacity"
-              priority
-            />
-          </Link>
-
+        {/* Logo */}
+<div className="flex items-center justify-center w-52 flex-shrink-0">
+  <Link href="/" className="group" aria-label="YORSTORE home">
+    <Image
+      src="/logo.png"
+      alt="YORSTORE"
+      width={220}
+      height={66}
+      className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
+      priority
+    />
+  </Link>
+</div>
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
             {NAV_LINKS.map((link) => (
