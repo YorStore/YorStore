@@ -26,18 +26,18 @@ export default function Navbar() {
       <div className="container-site">
         <div className="flex items-center justify-between py-3 md:py-4">
 
-        {/* Logo */}
-<Link href="/" className="flex-shrink-0 group -ml-3" aria-label="YORSTORE home">
-  <Image
-    src="/logo.png"
-    alt="YORSTORE"
-    width={220}
-    height={66}
-    className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
-    priority
-  />
-</Link>
-</div>
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0 group -ml-3" aria-label="YORSTORE home">
+            <Image
+              src="/logo.png"
+              alt="YORSTORE"
+              width={220}
+              height={66}
+              className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
+              priority
+            />
+          </Link>
+
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
             {NAV_LINKS.map((link) => (
@@ -57,7 +57,7 @@ export default function Navbar() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <a
+            
               href={SITE_CONFIG.phoneHref}
               className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy bg-brand-navy/5 border border-brand-navy/20 px-4 py-2.5 rounded-xl hover:bg-brand-navy/10 transition-colors duration-150"
             >
@@ -103,7 +103,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="mt-3 pt-3 border-t border-brand-navy/10 flex flex-col gap-2.5">
-              <a
+              
                 href={SITE_CONFIG.phoneHref}
                 className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-brand-navy bg-brand-navy/5 border border-brand-navy/20 px-4 py-3 rounded-xl hover:bg-brand-navy/10 transition-colors"
               >
