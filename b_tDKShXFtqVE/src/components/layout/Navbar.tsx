@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between py-3 md:py-4">
 
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0 group -ml-4 lg:-ml-6" aria-label="YORSTORE home">
+          <Link href="/" className="flex-shrink-0 group relative -left-3 lg:-left-6" aria-label="YORSTORE home">
             <Image
               src="/logo.png"
               alt="YORSTORE"
