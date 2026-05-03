@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { SITE_CONFIG, NAV_LINKS } from "@/lib/config";
 
 export default function Footer() {
@@ -13,13 +12,6 @@ export default function Footer() {
 
           {/* Brand column — wider */}
           <div className="md:col-span-5">
-            <Image
-              src="/logo.png"
-              alt="YORSTORE"
-              width={180}
-              height={54}
-              className="h-12 w-auto brightness-0 invert mb-5"
-            />
             <p className="text-blue-200/70 text-sm leading-relaxed max-w-xs mb-6">
               Flexible, secure, local storage across Yorkshire.
               We come to you — you load, or we load for you.
