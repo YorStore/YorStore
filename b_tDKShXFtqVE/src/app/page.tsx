@@ -35,7 +35,7 @@ function HeroSection() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[300px] rounded-full bg-brand-blue-mid/5" />
       </div>
 
-      <div className="relative container-site py-20 md:py-28 lg:py-32">
+      <div className="relative container-site py-14 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: copy */}

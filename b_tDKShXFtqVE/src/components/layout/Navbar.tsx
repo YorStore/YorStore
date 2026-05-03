@@ -24,17 +24,17 @@ export default function Navbar() {
       }`}
     >
       <div className="container-site">
-        <div className="flex items-center justify-between py-3 md:py-4">
+        <div className="flex items-center justify-between py-2 md:py-3">
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 group relative -left-3 lg:-left-6" aria-label="YORSTORE home">
             <Image
               src="/logo.png"
               alt="YORSTORE"
-              width={220}
-              height={66}
-              sizes="(min-width: 768px) 213px, 187px"
-              className="w-[187px] md:w-[213px] h-auto max-w-none group-hover:opacity-90 transition-opacity"
+              width={165}
+              height={50}
+              sizes="(min-width: 768px) 160px, 140px"
+              className="w-[140px] md:w-[160px] h-auto max-w-none group-hover:opacity-90 transition-opacity"
               priority
             />
           </Link>
