@@ -33,7 +33,8 @@ export default function Navbar() {
               alt="YORSTORE"
               width={220}
               height={66}
-              className="h-14 md:h-16 w-auto group-hover:opacity-90 transition-opacity"
+              sizes="(min-width: 768px) 213px, 187px"
+              className="w-[187px] md:w-[213px] h-auto max-w-none group-hover:opacity-90 transition-opacity"
               priority
             />
           </Link>
