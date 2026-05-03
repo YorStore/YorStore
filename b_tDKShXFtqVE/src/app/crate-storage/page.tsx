@@ -21,6 +21,7 @@ export default function CrateStoragePage() {
         ctaHref="/contact#quote"
       />
       <WhatIsCrateStorage />
+      <WhatFitsInACrate />
       <CrateBenefits />
       <CTABand
         heading="Want to know more about crate storage?"
@@ -73,6 +74,56 @@ function WhatIsCrateStorage() {
                 <p className="text-white text-xs font-bold">Cost-efficient</p>
                 <p className="text-blue-200/70 text-xs">flexible duration</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ── What fits in a crate ───────────────────── */
+function WhatFitsInACrate() {
+  const bullets = [
+    "Sofas and armchairs",
+    "10–15 medium boxes",
+    "Small furniture",
+    "Bikes, appliances and seasonal items",
+  ];
+
+  return (
+    <section className="section-pad bg-white border-t border-slate-100">
+      <div className="container-site">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">
+              Crate storage guide
+            </span>
+            <h2 className="text-3xl font-extrabold text-brand-navy mb-3 leading-tight">
+              How much can you fit in a crate?
+            </h2>
+            <p className="text-slate-600 text-lg leading-relaxed mb-6 max-w-xl">
+              Here&apos;s what typically fits in one YORSTORE crate
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-7">
+              Our storage crates are designed for everyday household items, small furniture and boxed belongings.
+              If you&apos;re unsure what will fit, just ask — we&apos;ll help you choose the right option.
+            </p>
+            <ul className="flex flex-col gap-3">
+              {bullets.map((item) => (
+                <li key={item} className="flex gap-3 text-slate-700 text-sm md:text-base leading-relaxed">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" aria-hidden />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-center lg:justify-end">
+            <div className="aspect-square w-full max-w-sm rounded-2xl border border-white/15 bg-gradient-to-br from-[#0f3060] to-[#1d5baa] shadow-md flex flex-col items-center justify-center text-center p-8">
+              <p className="text-white font-semibold">Sketch coming soon</p>
+              <p className="text-blue-200/80 text-sm mt-2 max-w-[12rem] leading-snug">
+                What fits in a YORSTORE crate
+              </p>
             </div>
           </div>
         </div>
