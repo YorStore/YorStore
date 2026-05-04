@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
@@ -67,13 +68,6 @@ function WhatIsCrateStorage() {
 
 /* ── What fits in a crate ───────────────────── */
 function WhatFitsInACrate() {
-  const bullets = [
-    "Sofas and armchairs",
-    "10–15 medium boxes",
-    "Small furniture",
-    "Bikes, appliances and seasonal items",
-  ];
-
   return (
     <section className="section-pad bg-white border-t border-slate-100">
       <div className="container-site">
@@ -92,21 +86,23 @@ function WhatFitsInACrate() {
               Our storage crates are designed for everyday household items, small furniture and boxed belongings.
               If you&apos;re unsure what will fit, just ask — we&apos;ll help you choose the right option.
             </p>
-            <ul className="flex flex-col gap-3">
-              {bullets.map((item) => (
-                <li key={item} className="flex gap-3 text-slate-700 text-sm md:text-base leading-relaxed">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" aria-hidden />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-slate-600 mb-4">See exactly what fits in a YORSTORE crate</p>
+            <Link href="/#enquiry-form" className="btn-primary px-8 py-3.5">
+              Starting from £15 a week
+            </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <div className="aspect-square w-full max-w-sm rounded-2xl border border-white/15 bg-gradient-to-br from-[#0f3060] to-[#1d5baa] shadow-md flex flex-col items-center justify-center text-center p-8">
-              <p className="text-white font-semibold">Sketch coming soon</p>
-              <p className="text-blue-200/80 text-sm mt-2 max-w-[12rem] leading-snug">
-                What fits in a YORSTORE crate
-              </p>
+            <div className="aspect-square w-full max-w-full flex items-center justify-center text-center">
+              <div className="w-full max-w-[90%] mx-auto flex items-center justify-center">
+                <Image
+                  src="/images/Whatfits.png"
+                  alt="What fits in a YORSTORE crate sketch"
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto object-contain object-center scale-[1.05]"
+                  sizes="(min-width: 1024px) 24rem, 100vw"
+                />
+              </div>
             </div>
           </div>
         </div>

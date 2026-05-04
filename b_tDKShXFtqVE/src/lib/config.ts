@@ -9,8 +9,8 @@ export const SITE_CONFIG = {
   tagline:      "Storage that comes to you.",
 
   // ── Contact details ──────────────────────────
-  phone:        "XXXXX XXXXXX",
-  phoneHref:    "tel:XXXXXXXXXX",
+  phone:        "07368 185565",
+  phoneHref:    "tel:+447368185565",
   email:        "hello@yorstore.co.uk",
   emailHref:    "mailto:hello@yorstore.co.uk",
   address:      "Yorkshire, UK",
