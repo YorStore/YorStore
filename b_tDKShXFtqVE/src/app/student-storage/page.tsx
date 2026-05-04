@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
@@ -38,36 +39,51 @@ export default function StudentStoragePage() {
 
 /* ── Main content ───────────────────────────── */
 function StudentDetails() {
-  const points = [
-    "Perfect for end-of-term storage when you can't take everything home",
-    "Ideal for boxes, bags, small furniture items, and bikes",
-    "Flexible rental periods — store over summer or just a few weeks",
-    "Affordable pricing for smaller volumes of items",
-    "Safe, secure storage — not just a garden shed",
-    "Easy to arrange — just call or send a message",
+  const bullets = [
+    "Store boxes, bags & small furniture",
+    "Flexible from a few weeks to all summer",
+    "We can drop boxes off before collection",
   ];
 
   return (
     <section className="section-pad bg-white">
-      <div className="container-site max-w-3xl">
-        <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">Perfect for</span>
-        <h2 className="text-3xl font-extrabold text-brand-navy mb-4">Storage without the stress</h2>
-        <p className="text-slate-600 leading-relaxed mb-8">
-          Moving out of student accommodation? Going travelling? Between flats? Our student and box storage
-          service is designed for exactly these moments — when you don't have a full house-worth to store,
-          just a collection of important things that need somewhere safe.
-        </p>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-          {points.map((p) => (
-            <li key={p} className="flex items-center gap-3 text-sm text-slate-700 font-medium bg-brand-blue-xlt border border-brand-blue-lt rounded-xl p-4">
-              <span className="flex-shrink-0 w-5 h-5 rounded-full bg-brand-navy flex items-center justify-center">
-                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              {p}
-            </li>
-          ))}
-        </ul>
-        <Link href="/contact#quote" className="btn-primary px-8 py-3.5">Get a Quote</Link>
+      <div className="container-site">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="order-2 lg:order-1 max-w-xl lg:max-w-none">
+            <h2 className="text-3xl font-extrabold text-brand-navy mb-8">Storage without the stress</h2>
+            <p className="text-slate-600 leading-relaxed mb-10">
+              Perfect for students moving out, travelling, or between flats. Store just what you need — quickly,
+              easily, and affordably.
+            </p>
+            <ul className="space-y-4 mb-12 text-slate-600 leading-relaxed">
+              {bullets.map((line) => (
+                <li key={line} className="flex gap-3">
+                  <span className="text-brand-navy shrink-0" aria-hidden>
+                    •
+                  </span>
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-slate-500 text-sm mb-3">Simple storage from just</p>
+            <Link href="#student-enquiry" className="btn-primary px-8 py-3.5 inline-flex">
+              £4 a week
+            </Link>
+          </div>
+
+          <div className="order-1 lg:order-2 flex items-center justify-center lg:justify-end py-4 lg:py-0">
+            <div className="w-full max-w-[90%] flex items-center justify-center">
+              <Image
+                src="/images/Student.png"
+                alt="Student storage"
+                width={1200}
+                height={1200}
+                className="w-full h-auto object-contain object-center"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -105,7 +121,7 @@ function WhoIsItFor() {
 /* ── Enquiry ────────────────────────────────── */
 function EnquirySection() {
   return (
-    <section className="section-pad bg-brand-blue-xlt">
+    <section id="student-enquiry" className="section-pad bg-brand-blue-xlt">
       <div className="container-site max-w-xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-extrabold text-brand-navy">Get in touch about student storage</h2>
