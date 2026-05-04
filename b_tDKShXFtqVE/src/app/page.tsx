@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/config";
 import EnquiryForm from "@/components/ui/EnquiryForm";
@@ -81,20 +82,17 @@ function HeroSection() {
 
           {/* Right: hero image placeholder */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-[#1a3d78] to-[#0d2552] border border-white/10 flex flex-col items-center justify-center text-center p-8 overflow-hidden">
-              {/* Decorative inner glow */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                <div className="w-64 h-64 rounded-full bg-brand-blue-mid" />
-              </div>
-              <div className="relative z-10">
-                <div className="w-20 h-20 rounded-2xl bg-brand-blue/40 border border-white/20 flex items-center justify-center mx-auto mb-5">
-                  <TruckIconLg />
-                </div>
-                <p className="text-white font-semibold mb-1">Photo coming soon</p>
-                <p className="text-blue-300/70 text-sm">Mobile storage unit at your door</p>
-              </div>
+            <div className="aspect-[4/3] rounded-3xl bg-transparent flex flex-col items-center justify-center text-center p-8 overflow-hidden">
+              <Image
+                src="/images/HPH.png"
+                alt="Mobile storage unit at your door"
+                fill
+                className="object-contain scale-110"
+                style={{ objectPosition: "center 90%" }}
+                priority
+              />
               {/* Corner label */}
-              <div className="absolute bottom-4 left-4 bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-3 py-2">
+              <div className="absolute bottom-4 left-4 z-10 bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-3 py-2">
                 <p className="text-xs font-semibold text-white">We come to you</p>
                 <p className="text-xs text-blue-200/70">Yorkshire-wide delivery</p>
               </div>
