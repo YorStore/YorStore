@@ -19,6 +19,11 @@ export default function StudentStoragePage() {
         subtext="Ideal for students, people between moves, or anyone with a smaller amount to store. Flexible, affordable, and easy to arrange."
         ctaLabel="Get a Quote"
         ctaHref="/contact#quote"
+        whatsapp={{
+          href: "https://wa.me/447368185565?text=Hi%20I%27m%20looking%20for%20student%20storage",
+          label: "Get a quick quote on WhatsApp",
+          supportingText: "No forms. Just message us.",
+        }}
       />
       <StudentDetails />
       <WhoIsItFor />
