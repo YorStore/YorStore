@@ -56,36 +56,20 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop CTAs + contact row */}
-          <div className="hidden lg:flex flex-col items-end gap-2 shrink-0">
+          {/* Desktop: phone + quote */}
+          <div className="hidden lg:flex items-center gap-4 shrink-0">
+            <a
+              href={SITE_CONFIG.phoneHref}
+              className="text-sm font-semibold text-brand-navy hover:text-brand-blue transition-colors whitespace-nowrap"
+            >
+              {SITE_CONFIG.phone}
+            </a>
             <Link
               href="/contact#quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-brand-navy/90 transition-colors duration-150"
             >
               Get a Quote
             </Link>
-            <div className="flex flex-wrap items-center justify-end gap-x-2 gap-y-1 text-xs font-medium text-brand-navy/70">
-              <a href={SITE_CONFIG.phoneHref} className="hover:text-brand-navy hover:underline">
-                {SITE_CONFIG.phone}
-              </a>
-              <span className="text-brand-navy/30 select-none" aria-hidden>
-                |
-              </span>
-              <a
-                href={SITE_CONFIG.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand-navy hover:underline"
-              >
-                WhatsApp
-              </a>
-              <span className="text-brand-navy/30 select-none" aria-hidden>
-                |
-              </span>
-              <a href={SITE_CONFIG.emailHref} className="hover:text-brand-navy hover:underline">
-                {SITE_CONFIG.email}
-              </a>
-            </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -118,35 +102,19 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <div className="mt-3 pt-3 border-t border-brand-navy/10 flex flex-col gap-3">
-              <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm font-medium text-brand-navy/80">
-                <a href={SITE_CONFIG.phoneHref} className="hover:text-brand-navy hover:underline">
-                  {SITE_CONFIG.phone}
-                </a>
-                <span className="text-brand-navy/30 select-none" aria-hidden>
-                  |
-                </span>
-                <a
-                  href={SITE_CONFIG.whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-brand-navy hover:underline"
-                >
-                  WhatsApp
-                </a>
-                <span className="text-brand-navy/30 select-none" aria-hidden>
-                  |
-                </span>
-                <a href={SITE_CONFIG.emailHref} className="hover:text-brand-navy hover:underline break-all text-center">
-                  {SITE_CONFIG.email}
-                </a>
-              </div>
+            <div className="mt-3 pt-3 border-t border-brand-navy/10 flex flex-col gap-2.5">
+              <a
+                href={SITE_CONFIG.phoneHref}
+                className="inline-flex items-center justify-center text-sm font-semibold text-brand-navy hover:text-brand-blue transition-colors py-1"
+              >
+                {SITE_CONFIG.phone}
+              </a>
               <Link
                 href="/contact#quote"
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-2 bg-brand-navy text-white text-sm font-bold px-4 py-3 rounded-xl hover:bg-brand-navy/90 transition-colors"
               >
-                Get a Free Quote
+                Get a Quote
               </Link>
             </div>
           </div>

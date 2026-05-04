@@ -29,6 +29,7 @@ export const NAV_LINKS = [
   { label: "Crate Storage",       href: "/crate-storage"       },
   { label: "Student Storage",     href: "/student-storage"     },
   { label: "Business Storage",    href: "/business-storage"    },
+  { label: "Removals",            href: "/removals-storage"    },
   { label: "About",               href: "/about"               },
   { label: "Contact",             href: "/contact"             },
 ] as const;

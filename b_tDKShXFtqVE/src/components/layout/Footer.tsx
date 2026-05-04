@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="md:col-span-4">
             <h3 className="text-xs font-bold text-white uppercase tracking-widest mb-5">Services</h3>
             <ul className="flex flex-col gap-2.5">
-              {NAV_LINKS.slice(0, 4).map((link) => (
+              {NAV_LINKS.slice(0, 5).map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
