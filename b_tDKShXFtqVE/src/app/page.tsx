@@ -17,7 +17,6 @@ export default function HomePage() {
       <HowItWorks />
       <MobileStorageFeature />
       <CrateStorageFeature />
-      <ServicesGrid />
       <WhyChooseUs />
       <QuoteSection />
     </>
@@ -371,58 +370,6 @@ function CrateStorageFeature() {
 }
 
 /* ─────────────────────────────────────────────────────────
-   SERVICES GRID — lighter cards for secondary services
-───────────────────────────────────────────────────────── */
-function ServicesGrid() {
-  const secondary = [
-    {
-      icon: <BoxIconSm />,
-      title: "Student & Box Storage",
-      desc:  "Small volume, short-term storage. Ideal for students or anyone with a few boxes to keep safe.",
-      href:  "/student-storage",
-    },
-    {
-      icon: <BuildingIconSm />,
-      title: "Business Storage",
-      desc:  "Flexible storage for businesses — stock, equipment, documents. Just get in touch.",
-      href:  "/business-storage",
-    },
-  ];
-
-  return (
-    <section className="section-pad-sm bg-white border-t border-slate-100">
-      <div className="container-site">
-        <div className="text-center mb-10">
-          <span className="eyebrow text-brand-blue mb-3 block">Also available</span>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-brand-navy">
-            More ways we can help
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
-          {secondary.map((svc) => (
-            <Link
-              key={svc.href}
-              href={svc.href}
-              className="group card hover:border-brand-blue/30 hover:shadow-md transition-all duration-200"
-            >
-              <span className="block text-brand-blue mb-3">{svc.icon}</span>
-              <h3 className="font-bold text-brand-navy text-base mb-2 group-hover:text-brand-blue transition-colors">
-                {svc.title}
-              </h3>
-              <p className="text-sm text-slate-500 leading-relaxed mb-4">{svc.desc}</p>
-              <span className="inline-flex items-center gap-1 text-sm font-semibold text-brand-blue group-hover:gap-2 transition-all">
-                Learn more <ArrowIcon />
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─────────────────────────────────────────────────────────
    WHY CHOOSE US — dark section
 ───────────────────────────────────────────────────────── */
 function WhyChooseUs() {
@@ -594,31 +541,10 @@ function FlexIcon() {
     </svg>
   );
 }
-function BoxIconSm() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5" rx="1"/><line x1="10" y1="12" x2="14" y2="12"/>
-    </svg>
-  );
-}
-function BuildingIconSm() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
-    </svg>
-  );
-}
 function CheckIcon() {
   return (
     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="20 6 9 17 4 12"/>
-    </svg>
-  );
-}
-function ArrowIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
     </svg>
   );
 }

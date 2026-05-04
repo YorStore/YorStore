@@ -4,7 +4,7 @@ import "./globals.css";
 import { SITE_CONFIG } from "@/lib/config";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ChatWidget from "@/components/ChatWidget";
+import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,7 +36,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <ChatWidget />
+        <WhatsAppFloat />
       </body>
     </html>
   );
