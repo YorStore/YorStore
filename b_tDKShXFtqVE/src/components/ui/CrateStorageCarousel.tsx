@@ -11,7 +11,7 @@ export default function CrateStorageCarousel() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -24,7 +24,7 @@ export default function CrateStorageCarousel() {
           src={src}
           alt="Secure storage crates in facility"
           fill
-          className={`object-cover transition-opacity duration-300 ${
+          className={`object-cover transition-opacity duration-[600ms] ease-in-out ${
             index === activeIndex ? "opacity-100" : "opacity-0"
           }`}
           sizes="(min-width: 1024px) 50vw, 100vw"
