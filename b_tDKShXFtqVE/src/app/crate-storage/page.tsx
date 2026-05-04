@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
+import CrateStorageCarousel from "@/components/ui/CrateStorageCarousel";
 
 export const metadata: Metadata = {
   title: "Crate Storage",
@@ -55,26 +56,8 @@ function WhatIsCrateStorage() {
             <Link href="/contact#quote" className="btn-primary px-8 py-3.5">Get a Quote</Link>
           </div>
 
-          {/* Image placeholder */}
-          <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-[#0d2552] to-[#1d5baa] flex flex-col items-center justify-center text-center p-10 relative overflow-hidden">
-            <div className="w-20 h-20 rounded-2xl bg-white/15 border border-white/20 flex items-center justify-center mx-auto mb-5">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
-              </svg>
-            </div>
-            <p className="text-white font-semibold mb-1">Photo coming soon</p>
-            <p className="text-blue-300/70 text-sm">Secure storage crates in facility</p>
-            <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-              <div className="flex-1 bg-white/10 border border-white/15 rounded-xl p-2.5 text-center">
-                <p className="text-white text-xs font-bold">Secure</p>
-                <p className="text-blue-200/70 text-xs">facility storage</p>
-              </div>
-              <div className="flex-1 bg-white/10 border border-white/15 rounded-xl p-2.5 text-center">
-                <p className="text-white text-xs font-bold">Cost-efficient</p>
-                <p className="text-blue-200/70 text-xs">flexible duration</p>
-              </div>
-            </div>
+          <div className="aspect-[4/3] rounded-3xl relative overflow-hidden">
+            <CrateStorageCarousel />
           </div>
         </div>
       </div>
