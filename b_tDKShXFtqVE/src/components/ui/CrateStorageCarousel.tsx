@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const images = ["/images/crate1.png", "/images/crate2.png", "/images/crate3.png"];
+const images = ["/images/Crate1.png", "/images/Crate2.png", "/images/Crate3.png"];
 
 export default function CrateStorageCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);

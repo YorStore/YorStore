@@ -95,7 +95,7 @@ function WhatFitsInACrate() {
             <div className="aspect-square w-full max-w-full flex items-center justify-center text-center">
               <div className="w-full max-w-[90%] mx-auto flex items-center justify-center">
                 <Image
-                  src="/images/Whatfits.png"
+                  src="/images/WhatFits.png"
                   alt="What fits in a YORSTORE crate sketch"
                   width={1200}
                   height={1200}
