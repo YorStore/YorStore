@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <AvailabilityStrip />
       <HeroSection />
       <TrustBar />
       <HowItWorks />
@@ -20,6 +21,31 @@ export default function HomePage() {
       <WhyChooseUs />
       <QuoteSection />
     </>
+  );
+}
+
+function AvailabilityStrip() {
+  return (
+    <section className="bg-brand-blue-xlt border-b border-brand-blue-lt">
+      <div className="container-site py-2.5">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
+          <p className="text-sm font-medium text-brand-navy">
+            <Link href="/student-storage" className="text-brand-blue hover:underline">
+              Student Storage
+            </Link>{" "}
+            and{" "}
+            <Link href="/business-storage" className="text-brand-blue hover:underline">
+              Business Storage
+            </Link>{" "}
+            now available across Yorkshire. Full mobile self storage trailer service{" "}
+            <span className="font-semibold text-brand-blue">launching soon</span> —{" "}
+            <Link href="/contact#quote" className="font-semibold text-brand-blue hover:underline">
+              enquire now for early access
+            </Link>
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
