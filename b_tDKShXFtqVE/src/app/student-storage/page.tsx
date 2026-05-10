@@ -4,6 +4,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
+import FaqAccordion from "@/components/ui/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Student & Box Storage",
@@ -15,9 +16,15 @@ export default function StudentStoragePage() {
   return (
     <>
       <PageHero
-        label="Student & box storage"
-        heading="Small volume storage, big on convenience"
-        subtext="Ideal for students, people between moves, or anyone with a smaller amount to store. Flexible, affordable, and easy to arrange."
+        label="Student storage"
+        heading="We collect from your door. You skip the van and the storage unit."
+        subtext="Box-based student storage with clear weekly rates. We come to you — perfect for summer, move-out week, or a few months away."
+        bullets={[
+          "Pickup at your hall, house, or flat — no self-storage runarounds.",
+          "Simple per-box pricing — premium feel, student-sensible numbers.",
+          "Built for term-time chaos: travel, switching flats, or heading home.",
+        ]}
+        pricingLine="Starting from £2.50 per box per week"
         ctaLabel="Get a Quote"
         ctaHref="/contact#quote"
         whatsapp={{
@@ -32,7 +39,86 @@ export default function StudentStoragePage() {
         heading="Need student or box storage?"
         subtext="Get in touch and we'll sort a simple, affordable solution for you."
       />
+      <StudentStorageFaqSection />
       <EnquirySection />
+    </>
+  );
+}
+
+const STUDENT_STORAGE_FAQ = [
+  {
+    question: "How does student storage work?",
+    answer:
+      "YORSTORE offers box-based student storage built around term dates and hand-in stress. You tell us what needs keeping, we arrange storage collected from your door, and your items stay secure until you want them back. It is a calm alternative to hauling boxes to a facility or juggling keys and lift slots during university storage crunch time.",
+  },
+  {
+    question: "Do you collect my boxes from my house or accommodation?",
+    answer:
+      "Yes. We collect from private homes and student accommodation across Yorkshire, including York and nearby university towns. Whether you are in halls, a shared house, or finishing a placement further afield, we agree a pickup window that works — so your box storage starts without a frantic last-mile trip.",
+  },
+  {
+    question: "How much does student storage cost?",
+    answer:
+      "Affordable student storage here is priced in a simple, per-box way so you can budget in advance. Your quote reflects how many boxes you store and how long you need them held — no cryptic facility add-ons. Many students find it compares well to self-storage when they only have a modest volume between moves.",
+  },
+  {
+    question: "Can I store things over summer?",
+    answer:
+      "Summer student storage is one of our most common requests. From move-out day to the moment you arrive back — or head to a new city — we keep your belongings safe while you work, travel, or decompress at home. Share your dates when you enquire and we will shape flexible storage around the academic calendar.",
+  },
+  {
+    question: "What can I store?",
+    answer:
+      "Typical student storage includes packed boxes, suitcases, small furniture, sports kit, and instruments that fit a sensible crate footprint. If something is oversized, fragile, or valuable, message us first — we will give honest guidance so collection day feels predictable, not improvised.",
+  },
+  {
+    question: "Can you provide boxes, tape and packing materials?",
+    answer:
+      "Yes. For many students we can supply boxes and packing materials — tape, labels, and other basics — ahead of your collection service. Box delivery can be arranged straight to your accommodation or shared house, so you are not hunting supplies the night before hand-in. It is one less job when you are moving home from university or clearing a flat between terms, and it keeps affordable student storage feeling genuinely low-effort from start to finish.",
+  },
+  {
+    question: "Do I need to hire a van or visit a storage unit?",
+    answer:
+      "Usually not. Because storage is collected from your door, there is often no need to hire a van, borrow a car, or spend an afternoon at a remote self-storage site. You pack, we collect, and you get back to exams, goodbyes, or the train — without turning moving day into a logistics project.",
+  },
+  {
+    question: "How long can I store my belongings for?",
+    answer:
+      "We offer flexible storage from a few weeks through a full summer or longer if plans shift — gap years, retakes, and last-minute tenancy changes happen. Tell us what you think you need up front; if dates move, a quick message is usually enough for us to adjust your student storage timeline sensibly.",
+  },
+  {
+    question: "Can you return my items to a different address?",
+    answer:
+      "Often yes. If you are student moving home first, then into a new flat — or switching from York to another city — we can usually deliver to a different drop-off than pickup. Flag it when you book and again when you are ready for return; clear timing helps us route your university storage delivery without fuss.",
+  },
+] as const;
+
+function StudentStorageFaqSection() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: STUDENT_STORAGE_FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <FaqAccordion
+        id="student-storage-faq"
+        eyebrow="FAQ"
+        heading="Student storage questions, answered"
+        items={[...STUDENT_STORAGE_FAQ]}
+      />
     </>
   );
 }

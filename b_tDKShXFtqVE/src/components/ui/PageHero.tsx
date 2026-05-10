@@ -10,12 +10,14 @@ interface PageHeroProps {
   label?:    string;
   heading:   string;
   subtext:   string;
+  bullets?:  string[];
+  pricingLine?: string;
   ctaLabel?: string;
   ctaHref?:  string;
   whatsapp?: PageHeroWhatsappCta;
 }
 
-export default function PageHero({ label, heading, subtext, ctaLabel, ctaHref, whatsapp }: PageHeroProps) {
+export default function PageHero({ label, heading, subtext, bullets, pricingLine, ctaLabel, ctaHref, whatsapp }: PageHeroProps) {
   return (
     <section className="relative bg-brand-navy overflow-hidden">
       {/* Subtle bg accents */}
@@ -37,8 +39,23 @@ export default function PageHero({ label, heading, subtext, ctaLabel, ctaHref, w
         <p className="text-lg text-blue-200/70 max-w-2xl leading-relaxed mb-6">
           {subtext}
         </p>
+        {bullets && bullets.length > 0 ? (
+          <ul className="mb-6 max-w-2xl space-y-2 text-base text-blue-200/80 leading-snug">
+            {bullets.map((line) => (
+              <li key={line} className="flex gap-2.5">
+                <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-blue-400" aria-hidden />
+                <span>{line}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
         {(ctaLabel && ctaHref) || whatsapp ? (
           <div className="flex flex-col items-stretch sm:items-start gap-3">
+            {pricingLine ? (
+              <p className="text-base font-semibold text-white tracking-tight">
+                {pricingLine}
+              </p>
+            ) : null}
             {ctaLabel && ctaHref && (
               <Link
                 href={ctaHref}
