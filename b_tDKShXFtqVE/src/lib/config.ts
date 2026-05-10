@@ -6,6 +6,8 @@
 
 export const SITE_CONFIG = {
   businessName: "YORSTORE",
+  /** Browser tab / social preview brand casing */
+  brandDisplayName: "Yorstore",
   tagline:      "Storage that comes to you.",
 
   // ── Contact details ──────────────────────────
@@ -21,6 +23,9 @@ export const SITE_CONFIG = {
   siteUrl:      "https://yorstore.co.uk",
   description:
     "Yorkshire storage collected from your door: mobile self storage, crate storage, student and business storage. Flexible, affordable, local — you load or we load.",
+  /** Open Graph / Twitter card description (link previews) */
+  socialDescription:
+    "Mobile self storage, student storage and business storage brought directly to your door.",
 } as const;
 
 export const NAV_LINKS = [

@@ -13,17 +13,40 @@ const poppins = Poppins({
   display: "swap",
 });
 
+const defaultTitle = `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage Yorkshire`;
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
-    default: `${SITE_CONFIG.businessName} | Mobile Self Storage Yorkshire`,
-    template: `%s | ${SITE_CONFIG.businessName}`,
+    default: defaultTitle,
+    template: `%s | ${SITE_CONFIG.brandDisplayName}`,
   },
   description: SITE_CONFIG.description,
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon.svg",
+  },
   openGraph: {
-    siteName: SITE_CONFIG.businessName,
+    siteName: SITE_CONFIG.brandDisplayName,
     locale: "en_GB",
     type: "website",
+    title: defaultTitle,
+    description: SITE_CONFIG.socialDescription,
+    images: [
+      {
+        url: "/logo.png",
+        width: 446,
+        height: 231,
+        alt: `${SITE_CONFIG.brandDisplayName} logo`,
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: SITE_CONFIG.socialDescription,
+    images: [`${SITE_CONFIG.siteUrl}/logo.png`],
   },
 };
 

@@ -5,7 +5,7 @@ import { SITE_CONFIG } from "@/lib/config";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: "YORSTORE | Mobile Self Storage Yorkshire",
+  title: `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage Yorkshire`,
   description: SITE_CONFIG.description,
 };
 
