@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
+import { SITE_CONFIG } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Mobile Self Storage",
@@ -20,6 +21,7 @@ export default function MobileSelfStoragePage() {
         ctaLabel="Get a Free Quote"
         ctaHref="/contact#quote"
       />
+      <LaunchingSoonNote />
       <HowMobileWorks />
       <LoadingOptions />
       <WhoIsItFor />
@@ -29,6 +31,34 @@ export default function MobileSelfStoragePage() {
       />
       <EnquirySection />
     </>
+  );
+}
+
+function LaunchingSoonNote() {
+  return (
+    <section className="bg-white py-12 md:py-16">
+      <div className="container-site">
+        <div className="mx-auto max-w-[800px] rounded-2xl border border-brand-blue-lt bg-brand-blue-xlt p-8 md:p-10 text-center">
+          <span className="inline-flex items-center rounded-full border border-brand-blue/20 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-blue">
+            Launching Soon
+          </span>
+          <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-brand-navy">
+            Mobile trailer storage is coming to Yorkshire
+          </h2>
+          <p className="mt-4 text-slate-700 leading-relaxed max-w-[650px] mx-auto">
+            We're currently preparing our full mobile self storage trailer service. In the meantime, crate, student and business storage are already available.
+          </p>
+          <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/contact#quote" className="btn-primary px-6 py-3 text-sm">
+              Register your interest
+            </Link>
+            <a href={SITE_CONFIG.whatsappHref} className="btn-outline px-6 py-3 text-sm">
+              WhatsApp us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

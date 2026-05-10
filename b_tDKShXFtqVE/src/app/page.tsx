@@ -57,6 +57,9 @@ function HeroSection() {
               You load it yourself — or we can load it for you.
               Flexible, secure, and completely local.
             </p>
+            <p className="text-sm text-blue-200/70 mb-5 max-w-lg">
+              Mobile self storage trailers launching soon.
+            </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <Link
