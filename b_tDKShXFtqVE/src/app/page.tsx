@@ -256,32 +256,21 @@ function MobileStorageFeature() {
   ];
 
   return (
-    <section className="section-pad bg-white">
+    <section className="section-pad bg-[#f4f7fd]">
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Image placeholder */}
           <div className="order-2 lg:order-1">
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-[#0d2552] to-[#1a4fa0] flex flex-col items-center justify-center text-center p-10 relative overflow-hidden">
-              <div className="absolute top-4 right-4 bg-white/10 border border-white/20 rounded-xl px-3 py-1.5">
-                <span className="text-xs font-bold text-white">Most popular</span>
-              </div>
-              <div className="w-20 h-20 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-5">
-                <TruckIconLg />
-              </div>
-              <p className="text-white font-semibold mb-1">Photo coming soon</p>
-              <p className="text-blue-200/70 text-sm">Trailer at customer's property</p>
-
-              {/* Two mini stat pills */}
-              <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                <div className="flex-1 bg-white/10 border border-white/20 rounded-xl p-2.5 text-center">
-                  <p className="text-white text-xs font-bold">We deliver</p>
-                  <p className="text-blue-200/70 text-xs">to your door</p>
-                </div>
-                <div className="flex-1 bg-white/10 border border-white/20 rounded-xl p-2.5 text-center">
-                  <p className="text-white text-xs font-bold">You choose</p>
-                  <p className="text-blue-200/70 text-xs">load or we load</p>
-                </div>
+            <div className="aspect-[4/3] rounded-3xl bg-[#f4f7fd] flex flex-col items-center justify-center text-center p-5 md:p-6 relative overflow-hidden">
+              <div className="relative z-0 w-full h-full min-h-[220px]">
+                <Image
+                  src="/images/Trailer2TBC.png"
+                  alt="Mobile self storage trailer at customer's property"
+                  fill
+                  className="object-contain object-center mix-blend-multiply scale-[1.28]"
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                />
               </div>
             </div>
           </div>
@@ -373,22 +362,15 @@ function CrateStorageFeature() {
 
           {/* Image placeholder */}
           <div>
-            <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-[#0f3060] to-[#1d5baa] flex flex-col items-center justify-center text-center p-10 relative overflow-hidden">
-              <div className="w-20 h-20 rounded-2xl bg-white/15 flex items-center justify-center mx-auto mb-5">
-                <CrateIconLg />
-              </div>
-              <p className="text-white font-semibold mb-1">Photo coming soon</p>
-              <p className="text-blue-200/70 text-sm">Secure storage crates in facility</p>
-
-              <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                <div className="flex-1 bg-white/10 border border-white/20 rounded-xl p-2.5 text-center">
-                  <p className="text-white text-xs font-bold">Secure</p>
-                  <p className="text-blue-200/70 text-xs">facility storage</p>
-                </div>
-                <div className="flex-1 bg-white/10 border border-white/20 rounded-xl p-2.5 text-center">
-                  <p className="text-white text-xs font-bold">Cost-efficient</p>
-                  <p className="text-blue-200/70 text-xs">flexible duration</p>
-                </div>
+            <div className="aspect-[4/3] rounded-3xl bg-brand-blue-xlt flex flex-col items-center justify-center text-center p-5 md:p-6 relative overflow-hidden">
+              <div className="relative z-0 w-full h-full min-h-[220px]">
+                <Image
+                  src="/images/TrailerTBC.png"
+                  alt="Storage trailer illustration"
+                  fill
+                  className="object-contain object-center mix-blend-multiply scale-[1.28]"
+                  sizes="(min-width: 1024px) 40vw, 90vw"
+                />
               </div>
             </div>
           </div>
@@ -517,14 +499,6 @@ function TruckIconLg() {
   return (
     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
-    </svg>
-  );
-}
-function CrateIconLg() {
-  return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
-      <polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
     </svg>
   );
 }
