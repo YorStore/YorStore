@@ -7,7 +7,7 @@ import EnquiryForm from "@/components/ui/EnquiryForm";
 export const metadata: Metadata = {
   title: "Removals & Storage",
   description:
-    "Full house moves into storage with YORSTORE and Yorkshire Rhodes Removals — loading, transport, secure storage, and return delivery across Yorkshire.",
+    "House moves into storage across Yorkshire: Yorkshire Rhodes Removals plus YORSTORE — load, transport, secure storage, return when you are ready.",
 };
 
 export default function RemovalsStoragePage() {
@@ -16,7 +16,7 @@ export default function RemovalsStoragePage() {
       <PageHero
         label="Removals & storage"
         heading="A complete house move into storage"
-        subtext={`Need more than storage? Through our sister company, Yorkshire Rhodes Removals, we can help with the full move — from loading at your home, transporting your belongings, placing them into secure storage, and returning them when you're ready.`}
+        subtext={`Full move into storage via Yorkshire Rhodes Removals: load at your home, transport, secure storage with YORSTORE, then delivery back when you are settled.`}
         ctaLabel="Get a removals & storage quote"
         ctaHref="/contact#quote"
       />
@@ -25,8 +25,8 @@ export default function RemovalsStoragePage() {
       <VanStressSection />
       <CTABand
         heading="Questions about removals and storage?"
-        subtext="Tell us your situation — we'll explain how we can help, with no obligation."
-        primaryLabel="Get in Touch"
+        subtext="Describe your move — we will outline options, no obligation."
+        primaryLabel="Get in touch"
       />
       <EnquirySection />
     </>
@@ -53,8 +53,7 @@ function IdealSection() {
               Ideal for house moves, delays and downsizing
             </h2>
             <p className="text-slate-600 leading-relaxed mb-8">
-              Whether you&apos;re between properties, waiting for keys, renovating, downsizing, or need a
-              temporary place for your belongings, we can make the whole process easier.
+              Between keys, renovating, downsizing, or need a pause for your stuff? One coordinated removals and storage path keeps it simpler.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {benefits.map((b) => (
@@ -120,8 +119,7 @@ function VanStressSection() {
           Storage without the stress of hiring a van
         </h2>
         <p className="text-blue-200/70 leading-relaxed mb-8">
-          You don&apos;t need to organise a van, lift heavy furniture, or coordinate multiple suppliers. We can
-          help bring removals and storage together in one simple service.
+          One service line for load, move, and storage — fewer vans to book, fewer suppliers to chase.
         </p>
         <Link href="/contact#quote" className="btn-white px-8 py-3.5 inline-flex">
           Ask about removals &amp; storage

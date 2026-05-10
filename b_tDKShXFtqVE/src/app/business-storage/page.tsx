@@ -11,7 +11,7 @@ const BUSINESS_STORAGE_WHATSAPP_HREF = `https://wa.me/447368185565?text=${encode
 export const metadata: Metadata = {
   title: "Business Storage",
   description:
-    "Flexible business storage solutions from YORSTORE across Yorkshire. We can store a wide range of items for businesses — get in touch to discuss your requirements.",
+    "Business and commercial storage in Yorkshire: stock, equipment, archives. Collection service, flexible terms, sensible pricing for small teams.",
 };
 
 export default function BusinessStoragePage() {
@@ -20,7 +20,7 @@ export default function BusinessStoragePage() {
       <PageHero
         label="Business storage"
         heading="Flexible storage for businesses of all sizes"
-        subtext="Need extra space for stock, equipment, or documents? We offer practical, flexible storage for businesses across Yorkshire — just get in touch."
+        subtext="Overflow stock, tools, archives — flexible business storage across Yorkshire with collection where it suits you."
         ctaLabel="Discuss Your Requirements"
         ctaHref={BUSINESS_STORAGE_WHATSAPP_HREF}
         ctaWhatsApp
@@ -28,8 +28,8 @@ export default function BusinessStoragePage() {
       <BusinessDetails />
       <CTABand
         heading="Tell us what your business needs"
-        subtext="Every business is different. Get in touch and we'll work out the best solution for you."
-        primaryLabel="Get in Touch"
+        subtext="Every setup differs — we propose storage that fits volume and budget."
+        primaryLabel="Get in touch"
       />
       <BusinessStorageFaqSection />
       <EnquirySection />
@@ -112,15 +112,10 @@ function BusinessDetails() {
             <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">Practical & flexible</span>
             <h2 className="text-3xl font-extrabold text-brand-navy mb-4">Business storage, made simple</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Running out of space at your business premises? We work with small businesses and sole traders
-              across Yorkshire to provide straightforward, flexible storage solutions.
-            </p>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Whether you need to store a few boxes or a larger volume of goods, we'll work with you to find
-              a practical arrangement that fits your needs and your budget.
+              Space tight at your shop, studio, or office? We support small businesses and sole traders across Yorkshire with commercial storage that stays practical — from a few crates to larger stock runs.
             </p>
             <p className="text-slate-600 leading-relaxed">
-              Just get in touch and tell us what you're looking for — we'll take it from there.
+              Tell us volume, access, and timing; we suggest an arrangement that fits. Collection service available where agreed.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

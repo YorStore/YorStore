@@ -14,7 +14,7 @@ const CRATE_STORAGE_WHATSAPP_QUOTE_HREF = `https://wa.me/447368185565?text=${enc
 export const metadata: Metadata = {
   title: "Crate Storage",
   description:
-    "Secure, cost-efficient crate storage from YORSTORE. Your belongings stored safely in robust crates — practical, affordable, and flexible across Yorkshire.",
+    "Affordable crate storage in Yorkshire: robust crates, secure facility, collection service. Practical when you do not need daily access.",
 };
 
 export default function CrateStoragePage() {
@@ -23,7 +23,7 @@ export default function CrateStoragePage() {
       <PageHero
         label="Crate storage"
         heading="Secure crate storage — simple and cost-effective"
-        subtext="We store your goods in robust, secure crates at our facility. A practical, affordable option that keeps your belongings safe and well-organised."
+        subtext="Robust crates, secure facility, sensible pricing — ideal when you do not need a full self-storage unit."
         ctaLabel="Enquire Now"
         ctaHref="/contact#quote"
       />
@@ -32,7 +32,7 @@ export default function CrateStoragePage() {
       <CrateBenefits />
       <CTABand
         heading="Want to know more about crate storage?"
-        subtext="Get in touch — we'll explain the options and give you a no-obligation quote."
+        subtext="Message us — we explain options and quote with no obligation."
       />
       <EnquirySection />
     </>
@@ -49,15 +49,10 @@ function WhatIsCrateStorage() {
             <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">How it works</span>
             <h2 className="text-3xl font-extrabold text-brand-navy mb-4">What is crate storage?</h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Crate storage is a practical, cost-efficient way to store your belongings. Your items are packed
-              into secure, stackable crates which we then store safely in our facility.
-            </p>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              It's a great option if you don't need regular access to your things — and it can work out
-              significantly cheaper than a traditional self-storage unit.
+              Items go into secure, stackable crates at our facility — affordable crate storage when you do not need constant access, often cheaper than a full unit.
             </p>
             <p className="text-slate-600 leading-relaxed mb-8">
-              When you need your belongings back, just let us know and we'll arrange a convenient time to return them.
+              Need things back? Tell us and we arrange return — collection service available across Yorkshire.
             </p>
             <a
               href={CRATE_STORAGE_WHATSAPP_QUOTE_HREF}
@@ -93,15 +88,14 @@ function WhatFitsInACrate() {
               How much can you fit in a crate?
             </h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-6 max-w-xl">
-              Here&apos;s what typically fits in one YORSTORE crate
+              Typical contents of one YORSTORE crate
             </p>
             <p className="text-slate-600 leading-relaxed mb-7">
-              Our storage crates are designed for everyday household items, small furniture and boxed belongings.
-              If you&apos;re unsure what will fit, just ask — we&apos;ll help you choose the right option.
+              Everyday household items, small furniture, boxed goods. Unsure on volume? Ask — we will size it honestly.
             </p>
-            <p className="text-slate-600 mb-4">See exactly what fits in a YORSTORE crate</p>
-            <Link href="/#enquiry-form" className="btn-primary px-8 py-3.5">
-              Starting from £15 a week
+            <p className="text-slate-600 mb-4">From £15 a week — get a tailored quote</p>
+            <Link href="/contact#quote" className="btn-primary px-8 py-3.5">
+              Get a quote
             </Link>
           </div>
           <div className="flex justify-center lg:justify-end">
@@ -127,12 +121,12 @@ function WhatFitsInACrate() {
 /* ── Benefits ───────────────────────────────── */
 function CrateBenefits() {
   const benefits = [
-    { title: "Cost-efficient",     desc: "Crate storage is often more affordable than renting a full self-storage unit." },
-    { title: "Secure",             desc: "Robust crates keep your items protected and safely stored at our facility." },
-    { title: "Organised",          desc: "Items are packed and inventoried so you always know what's where." },
-    { title: "Flexible duration",  desc: "Store for as long as you need — short-term or ongoing, no long contracts." },
-    { title: "Easy retrieval",     desc: "Just let us know when you need something back and we'll arrange it." },
-    { title: "No van hire needed", desc: "We handle the collection — no van rental, no heavy lifting headaches." },
+    { title: "Cost-efficient",     desc: "Often beats a full self-storage unit when volume is modest." },
+    { title: "Secure",             desc: "Robust crates in our facility — not ad-hoc garage space." },
+    { title: "Organised",          desc: "Packed and inventoried so you know what is where." },
+    { title: "Flexible duration",  desc: "Short jobs or long stays — no long lock-in." },
+    { title: "Easy retrieval",     desc: "Request a return; we schedule delivery." },
+    { title: "No van hire needed", desc: "We can collect — fewer van-and-lift days for you." },
   ];
 
   return (

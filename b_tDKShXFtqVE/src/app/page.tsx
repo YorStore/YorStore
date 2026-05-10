@@ -79,12 +79,11 @@ function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/80 leading-relaxed mb-8 max-w-lg">
-              We deliver a storage unit straight to your door.
-              You load it yourself — or we can load it for you.
-              Flexible, secure, and completely local.
+              Storage brought to your door across Yorkshire and beyond.
+              You load — or we load for you. Flexible, secure, local.
             </p>
             <p className="text-sm text-blue-200/70 mb-5 max-w-lg">
-              Mobile self storage trailers launching soon.
+              Trailer-based mobile self storage launching soon.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -113,7 +112,7 @@ function HeroSection() {
             <div className="aspect-[4/3] rounded-3xl bg-transparent flex flex-col items-center justify-center text-center p-8 overflow-hidden">
               <Image
                 src="/images/HPH.png"
-                alt="Mobile storage unit at your door"
+                alt="Yorkshire mobile self storage — unit at your door"
                 fill
                 className="object-contain scale-110"
                 style={{ objectPosition: "center 90%" }}
@@ -207,7 +206,7 @@ function HowItWorks() {
             How it works
           </h2>
           <p className="text-blue-200/70 max-w-xl mx-auto">
-            Four simple steps from enquiry to secure storage — no complicated forms, no awkward logistics.
+            From enquiry to secure storage in four steps — minimal fuss, clear logistics.
           </p>
         </div>
 
@@ -249,10 +248,9 @@ function HowItWorks() {
 ───────────────────────────────────────────────────────── */
 function MobileStorageFeature() {
   const points = [
-    "We deliver a storage unit or trailer directly to your property",
-    "Load it yourself at your own pace — day or evening",
-    "Or choose our loading service and we handle everything",
-    "We collect and store it securely. Retrieval any time you need",
+    "Unit or trailer delivered to your property",
+    "Self-load on your schedule — or we load for you",
+    "We collect and store securely; retrieve when you need it",
   ];
 
   return (
@@ -282,8 +280,7 @@ function MobileStorageFeature() {
               Mobile Self Storage —<br />storage made easy
             </h2>
             <p className="text-slate-600 leading-relaxed mb-7">
-              Forget hiring a van and driving to a facility. With YORSTORE, the storage comes to you.
-              We deliver a unit straight to your door — you choose how involved you want to be.
+              Skip the van and the depot. Mobile self storage comes to you in Yorkshire — you stay in control of how much we handle.
             </p>
 
             <ul className="flex flex-col gap-3 mb-8">
@@ -317,10 +314,10 @@ function MobileStorageFeature() {
 ───────────────────────────────────────────────────────── */
 function CrateStorageFeature() {
   const points = [
-    "Robust, stackable storage crates for your belongings",
-    "Cost-efficient — often cheaper than a full self-storage unit",
-    "Secure facility storage — not just a garage",
-    "Easy retrieval — just let us know when you need things back",
+    "Robust crates, stacked and stored in our facility",
+    "Often better value than a full self-storage unit",
+    "Secure storage — not a spare garage",
+    "Retrieval when you need it — just say when",
   ];
 
   return (
@@ -335,8 +332,7 @@ function CrateStorageFeature() {
               Crate Storage —<br />practical and affordable
             </h2>
             <p className="text-slate-600 leading-relaxed mb-7">
-              Your items packed into secure, stackable crates and stored safely in our facility.
-              A smart alternative when you don't need regular access — and often better value.
+              Crate storage: your things packed, stacked, and kept in our facility. Ideal when you do not need constant access — and usually easier on the budget than a full unit.
             </p>
 
             <ul className="flex flex-col gap-3 mb-8">
@@ -388,7 +384,7 @@ function WhyChooseUs() {
     {
       icon: <ShieldIcon />,
       title: "Secure & insured",
-      desc:  "Your belongings are stored safely. We take that responsibility seriously.",
+      desc:  "Your items are stored with care — we treat that duty seriously.",
     },
     {
       icon: <CalendarIcon />,
@@ -403,7 +399,7 @@ function WhyChooseUs() {
     {
       icon: <FlexIcon />,
       title: "Flexible access",
-      desc:  "Need your things back? Just let us know and we'll arrange it.",
+      desc:  "Need items back? Tell us and we will arrange delivery.",
     },
   ];
 
@@ -454,7 +450,7 @@ function QuoteSection() {
               Get a free quote
             </h2>
             <p className="text-slate-500">
-              Tell us what you need and we'll come back to you quickly — no pressure, no commitment.
+              Tell us what you need — we reply fast, with no pressure to commit.
             </p>
           </div>
 

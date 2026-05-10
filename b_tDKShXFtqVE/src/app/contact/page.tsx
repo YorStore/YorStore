@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with YORSTORE. Call, email, or send an enquiry for a free, no-obligation storage quote across Yorkshire.",
+    "Contact YORSTORE for storage in Yorkshire: call, email, WhatsApp, or send an enquiry. Fast replies, no obligation.",
 };
 
 export default function ContactPage() {
@@ -15,7 +15,7 @@ export default function ContactPage() {
       <PageHero
         label="Get in touch"
         heading="We'd love to hear from you"
-        subtext="Call, email, or send us a message. We aim to respond quickly — no pressure, no obligation."
+        subtext="Call, email, WhatsApp, or use the form. We reply quickly — zero pressure."
       />
       <ContactSection />
     </>
@@ -45,7 +45,7 @@ function ContactSection() {
       title: "WhatsApp",
       detail: "Message us on WhatsApp",
       href:   SITE_CONFIG.whatsappHref,
-      note:   "Quickest for student storage, crate storage and general questions",
+      note:   "Fastest for student, crate, or general storage questions",
       fullCard: true as const,
     },
     {
@@ -130,8 +130,7 @@ function ContactSection() {
             <div className="p-5 rounded-2xl bg-brand-navy border border-white/10">
               <p className="text-xs font-bold text-blue-300 uppercase tracking-wider mb-2">Response times</p>
               <p className="text-xs text-blue-200/70 leading-relaxed">
-                We aim to respond to all enquiries within a few hours during normal business hours.
-                For urgent requirements, calling is always fastest.
+                Most enquiries get a same-day reply in working hours. Urgent? Call — it is fastest.
               </p>
             </div>
           </div>
@@ -142,7 +141,7 @@ function ContactSection() {
               <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-2">Quick enquiry</span>
               <h2 className="text-2xl font-extrabold text-brand-navy mb-1">Send an enquiry</h2>
               <p className="text-slate-500 text-sm mb-6">
-                Fill in your details below and we'll come back to you with a free, no-obligation quote.
+                Send a few details — we will reply with a free, no-obligation quote.
               </p>
               <EnquiryForm subject="Website Enquiry" />
             </div>

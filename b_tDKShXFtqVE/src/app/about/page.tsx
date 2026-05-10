@@ -5,7 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "YORSTORE is a local Yorkshire storage business. Flexible, friendly, and secure mobile self storage and crate storage. Find out more about who we are.",
+    "Local Yorkshire storage: mobile self storage, crates, student and business options. Straight answers, flexible terms, collection from your door.",
 };
 
 export default function AboutPage() {
@@ -14,13 +14,13 @@ export default function AboutPage() {
       <PageHero
         label="About YORSTORE"
         heading="Local, friendly, and straight-talking storage"
-        subtext="We're a Yorkshire-based storage business built on keeping things simple, honest, and helpful. No fuss. No jargon. Just good storage."
+        subtext="Yorkshire storage, built on simplicity and straight answers — no jargon, no runaround."
       />
       <OurStory />
       <OurValues />
       <CTABand
         heading="Ready to get started?"
-        subtext="We'd love to help — get in touch today for a free, no-obligation quote."
+        subtext="Free, no-obligation quote — call, email, or use the contact form."
       />
     </>
   );
@@ -35,22 +35,13 @@ function OurStory() {
         <h2 className="text-3xl font-extrabold text-brand-navy mb-6">A local team with a simple mission</h2>
         <div className="space-y-5 text-slate-600 leading-relaxed">
           <p>
-            YORSTORE is a local storage business serving customers across Yorkshire. We started because we
-            believed storage should be easier — more flexible, more convenient, and less of a headache than
-            the traditional model.
+            YORSTORE serves Yorkshire with storage that feels simpler than the old model: flexible, affordable collection service, less time lost to vans and depots.
           </p>
           <p>
-            Our main focus is mobile self storage: we bring a storage unit or trailer directly to your door,
-            so you don't have to hire a van or make multiple trips to a storage facility. You load it yourself,
-            or we load it for you — whichever works best.
+            Mobile self storage is our headline offer — a unit or trailer to your door. You self-load or we load. We also run crate storage, student and box storage, and practical options for small businesses.
           </p>
           <p>
-            We also offer crate storage, student and box storage, and flexible solutions for small businesses.
-            Whatever you need to store, we'll find a practical, cost-effective way to help.
-          </p>
-          <p>
-            When you get in touch, you're talking to real people who live and work in Yorkshire — not a call
-            centre. We keep things honest, straightforward, and hassle-free.
+            When you message or call, you reach people based here — not a distant call centre. Honest pricing, clear timelines, minimal hassle.
           </p>
         </div>
       </div>
@@ -61,12 +52,12 @@ function OurStory() {
 /* ── Values ─────────────────────────────────── */
 function OurValues() {
   const values = [
-    { title: "Convenient",   desc: "We come to you. No van hire, no trips to a facility, no awkward logistics." },
-    { title: "Flexible",     desc: "No rigid contracts. Store for as long — or as short — as you need." },
-    { title: "Secure",       desc: "Your belongings are stored safely. We take that responsibility seriously." },
-    { title: "Honest",       desc: "Clear pricing, straight answers, and no unexpected surprises." },
-    { title: "Local",        desc: "We're a Yorkshire business, serving Yorkshire customers." },
-    { title: "Friendly",     desc: "Approachable, easy to talk to, and always happy to help." },
+    { title: "Convenient",   desc: "Collection from your door. Fewer van trips, fewer facility headaches." },
+    { title: "Flexible",     desc: "Store short-term or long-term — terms that match real life." },
+    { title: "Secure",       desc: "Safe storage, handled with care." },
+    { title: "Honest",       desc: "Clear quotes, no surprise add-ons." },
+    { title: "Local",        desc: "Yorkshire team, Yorkshire customers." },
+    { title: "Friendly",     desc: "Easy to reach, quick to help." },
   ];
 
   return (

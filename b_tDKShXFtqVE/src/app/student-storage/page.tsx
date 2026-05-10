@@ -8,7 +8,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "Student & Box Storage",
   description:
-    "Affordable student and box storage from YORSTORE. Perfect for students at end of term or anyone with a small volume of items to store. Flexible and low-cost.",
+    "Student and box storage in Yorkshire: collection from your door, per-box pricing, summer and term-time flexible storage. York and wider region.",
 };
 
 export default function StudentStoragePage() {
@@ -17,7 +17,7 @@ export default function StudentStoragePage() {
       <PageHero
         label="Student storage"
         heading="We collect from your door. You skip the van and the storage unit."
-        subtext="Box-based student storage with clear weekly rates. We come to you — perfect for summer, move-out week, or a few months away."
+        subtext="Per-box weekly rates, collection from your door — built for summer, hand-in week, or a few months away."
         bullets={[
           "Pickup at your hall, house, or flat — no self-storage runarounds.",
           "Simple per-box pricing — premium feel, student-sensible numbers.",
@@ -36,7 +36,7 @@ export default function StudentStoragePage() {
       <WhoIsItFor />
       <CTABand
         heading="Need student or box storage?"
-        subtext="Get in touch and we'll sort a simple, affordable solution for you."
+        subtext="We size a simple, affordable plan — message or call."
       />
       <StudentStorageFaqSection />
       <EnquirySection />
@@ -154,7 +154,7 @@ function StudentDetails() {
               Student storage made simple
             </h2>
             <p className="text-slate-600 leading-relaxed mb-10 text-[0.9375rem] md:text-base">
-              Door-to-door collection service from university accommodation. Box storage without the van or the depot run.
+              Door-to-door collection from halls and shared houses across Yorkshire — box storage without van hire or depot runs.
             </p>
 
             <ol className="space-y-8 mb-10 list-none p-0 m-0">
@@ -208,10 +208,10 @@ function StudentDetails() {
 /* ── Who is it for ──────────────────────────── */
 function WhoIsItFor() {
   const groups = [
-    { title: "Students",            desc: "End-of-term or end-of-year storage. Keep your things safe over summer without dragging them home." },
-    { title: "Young professionals", desc: "Between renting and buying, or moving cities? A simple, flexible solution." },
-    { title: "Travellers",          desc: "Going away for a few months? Keep your belongings safe while you're on the move." },
-    { title: "Declutterers",        desc: "A few boxes of things you can't quite part with but don't have room for right now." },
+    { title: "Students",            desc: "Hand-in or summer break — store without shipping everything home." },
+    { title: "Young professionals", desc: "Between flats or cities — short, flexible box storage." },
+    { title: "Travellers",          desc: "Away for a stretch — belongings stay secure until you are back." },
+    { title: "Declutterers",        desc: "A few boxes you are not ready to lose — off-site, organised." },
   ];
 
   return (
@@ -241,7 +241,7 @@ function EnquirySection() {
       <div className="container-site max-w-xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-extrabold text-brand-navy">Get in touch about student storage</h2>
-          <p className="text-slate-500 mt-2 text-sm">Tell us what you need and we'll come back with a straightforward quote.</p>
+          <p className="text-slate-500 mt-2 text-sm">What you need, how long, where — we reply with a clear quote.</p>
         </div>
         <div className="card shadow-md">
           <EnquiryForm subject="Student / Box Storage Enquiry" />

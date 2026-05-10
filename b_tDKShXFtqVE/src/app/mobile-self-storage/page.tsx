@@ -9,7 +9,7 @@ import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta"
 export const metadata: Metadata = {
   title: "Mobile Self Storage",
   description:
-    "YORSTORE mobile self storage — we deliver a storage unit to your door across Yorkshire. Load it yourself or let us load it for you. Flexible, secure, and local.",
+    "Mobile self storage in Yorkshire: storage unit or trailer to your door. Self-load or we load. Flexible, secure — trailer service launching soon.",
 };
 
 export default function MobileSelfStoragePage() {
@@ -18,7 +18,7 @@ export default function MobileSelfStoragePage() {
       <PageHero
         label="Our main service"
         heading="Mobile Self Storage"
-        subtext="We bring the storage unit to your door. You choose how involved you want to be — load it yourself or let our team take care of everything."
+        subtext="The unit comes to you. Self-load or full load service — your call."
         ctaLabel="Get a Free Quote"
         ctaHref="/contact#quote"
       />
@@ -28,7 +28,7 @@ export default function MobileSelfStoragePage() {
       <WhoIsItFor />
       <CTABand
         heading="Interested in mobile self storage?"
-        subtext="Get in touch and we'll talk you through the options — no jargon, no pressure."
+        subtext="We walk you through options plainly — no jargon, no pressure."
       />
       <EnquirySection />
     </>
@@ -47,7 +47,7 @@ function LaunchingSoonNote() {
             Mobile trailer storage is coming to Yorkshire
           </h2>
           <p className="mt-4 text-slate-700 leading-relaxed max-w-[650px] mx-auto">
-            We're currently preparing our full mobile self storage trailer service. In the meantime, crate, student and business storage are already available.
+            Full trailer-based mobile self storage is in preparation. Crate, student, and business storage are live now across Yorkshire.
           </p>
           <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact#quote" className="btn-primary px-6 py-3 text-sm">
@@ -124,8 +124,7 @@ function LoadingOptions() {
             </div>
             <h3 className="font-extrabold text-white text-lg mb-3">You load it</h3>
             <p className="text-blue-200/70 text-sm leading-relaxed">
-              We leave the unit at your property and you pack it yourself — at your own pace, in your own time.
-              Perfect for decluttering, moving, or longer storage projects.
+              We drop the unit; you pack on your timeline — strong for moves, declutters, or longer projects.
             </p>
           </div>
 
@@ -140,8 +139,7 @@ function LoadingOptions() {
             </div>
             <h3 className="font-extrabold text-white text-lg mb-3">We load it</h3>
             <p className="text-blue-100/80 text-sm leading-relaxed">
-              Let our team handle the loading for you. Great if you're short on time, need help with heavy items,
-              or simply want a completely hands-off experience.
+              Our crew loads for you — best when time is tight, items are heavy, or you want hands-off.
             </p>
           </div>
         </div>
@@ -166,7 +164,7 @@ function WhoIsItFor() {
       <div className="container-site max-w-3xl">
         <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">Ideal for</span>
         <h2 className="text-3xl font-extrabold text-brand-navy mb-4">Who is it for?</h2>
-        <p className="text-slate-500 mb-8 leading-relaxed">Mobile self storage works for all kinds of situations:</p>
+        <p className="text-slate-500 mb-8 leading-relaxed">Common fits:</p>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
           {audience.map((item) => (
             <li key={item} className="flex items-center gap-3 text-sm text-slate-700 font-medium bg-brand-blue-xlt border border-brand-blue-lt rounded-xl p-4">
@@ -190,7 +188,7 @@ function EnquirySection() {
       <div className="container-site max-w-xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl font-extrabold text-brand-navy">Ask us about mobile self storage</h2>
-          <p className="text-slate-500 mt-2 text-sm">Quick response — we're a friendly local team.</p>
+          <p className="text-slate-500 mt-2 text-sm">Local team — we reply fast.</p>
         </div>
         <div className="card shadow-md">
           <EnquiryForm subject="Mobile Self Storage Enquiry" />

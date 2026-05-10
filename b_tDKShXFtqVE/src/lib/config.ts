@@ -20,7 +20,7 @@ export const SITE_CONFIG = {
   // ── Meta ─────────────────────────────────────
   siteUrl:      "https://yorstore.co.uk",
   description:
-    "YORSTORE offers flexible mobile self storage, crate storage, and box storage across Yorkshire. We come to you — you load, or we load for you.",
+    "Yorkshire storage collected from your door: mobile self storage, crate storage, student and business storage. Flexible, affordable, local — you load or we load.",
 } as const;
 
 export const NAV_LINKS = [
