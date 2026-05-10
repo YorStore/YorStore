@@ -72,9 +72,14 @@ function ContactSection() {
             </div>
 
             {contactMethods.map((method) => {
+              const isWhatsApp = method.title === "WhatsApp";
               const inner = (
                 <>
-                  <span className="flex-shrink-0 w-10 h-10 rounded-xl bg-brand-navy flex items-center justify-center text-white">
+                  <span
+                    className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-white ${
+                      isWhatsApp ? "bg-[#25D366]" : "bg-brand-navy"
+                    }`}
+                  >
                     {method.icon}
                   </span>
                   <div>
@@ -93,8 +98,9 @@ function ContactSection() {
                 </>
               );
 
-              const cardClass =
-                "flex items-start gap-4 p-5 rounded-2xl bg-brand-blue-xlt border border-brand-blue-lt transition-colors";
+              const cardClass = isWhatsApp
+                ? "flex items-start gap-4 p-5 rounded-2xl bg-[#25D366]/12 border border-[#25D366]/40 transition-colors"
+                : "flex items-start gap-4 p-5 rounded-2xl bg-brand-blue-xlt border border-brand-blue-lt transition-colors";
 
               if (method.fullCard && method.href) {
                 return (
@@ -103,7 +109,11 @@ function ContactSection() {
                     href={method.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${cardClass} hover:border-brand-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue`}
+                    className={`${cardClass} ${
+                      isWhatsApp
+                        ? "hover:border-[#25D366]/70 hover:bg-[#25D366]/16 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
+                        : "hover:border-brand-blue focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+                    }`}
                   >
                     {inner}
                   </a>

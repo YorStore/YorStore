@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
@@ -28,7 +27,7 @@ export default function StudentStoragePage() {
         ctaLabel="Get a Quote"
         ctaHref="/contact#quote"
         whatsapp={{
-          href: "https://wa.me/447368185565?text=Hi%20I%27m%20looking%20for%20student%20storage",
+          href: `https://wa.me/447368185565?text=${encodeURIComponent("Hi Yorstore, I'm looking for student storage")}`,
           label: "Get a quick quote on WhatsApp",
           supportingText: "No forms. Just message us.",
         }}
@@ -123,12 +122,24 @@ function StudentStorageFaqSection() {
   );
 }
 
-/* ── Main content ───────────────────────────── */
+/* ── How it works ───────────────────────────── */
 function StudentDetails() {
-  const bullets = [
-    "Store boxes, bags & small furniture",
-    "Flexible from a few weeks to all summer",
-    "We can drop boxes off before collection",
+  const steps = [
+    {
+      title: "We deliver",
+      desc:
+        "Boxes, tape and collection straight to your accommodation — hall or shared house, on your timeline.",
+    },
+    {
+      title: "We store",
+      desc:
+        "Flexible student storage and box storage off-site. No van hire. No storage unit visits.",
+    },
+    {
+      title: "We return",
+      desc:
+        "Choose when and where you want everything delivered back — new flat, home, or campus.",
+    },
   ];
 
   return (
@@ -136,37 +147,56 @@ function StudentDetails() {
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1 max-w-xl lg:max-w-none">
-            <h2 className="text-3xl font-extrabold text-brand-navy mb-8">Storage without the stress</h2>
-            <p className="text-slate-600 leading-relaxed mb-10">
-              Perfect for students moving out, travelling, or between flats. Store just what you need — quickly,
-              easily, and affordably.
+            <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">
+              How it works
+            </span>
+            <h2 className="text-3xl font-extrabold text-brand-navy mb-5 leading-tight">
+              Student storage made simple
+            </h2>
+            <p className="text-slate-600 leading-relaxed mb-10 text-[0.9375rem] md:text-base">
+              Door-to-door collection service from university accommodation. Box storage without the van or the depot run.
             </p>
-            <ul className="space-y-4 mb-12 text-slate-600 leading-relaxed">
-              {bullets.map((line) => (
-                <li key={line} className="flex gap-3">
-                  <span className="text-brand-navy shrink-0" aria-hidden>
-                    •
+
+            <ol className="space-y-8 mb-10 list-none p-0 m-0">
+              {steps.map((step, i) => (
+                <li key={step.title} className="flex gap-4">
+                  <span
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand-navy text-xs font-bold text-white"
+                    aria-hidden
+                  >
+                    {i + 1}
                   </span>
-                  <span>{line}</span>
+                  <div>
+                    <h3 className="font-bold text-brand-navy mb-1.5">{step.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{step.desc}</p>
+                  </div>
                 </li>
               ))}
-            </ul>
-            <p className="text-slate-500 text-sm mb-3">Simple storage from just</p>
-            <Link href="#student-enquiry" className="btn-primary px-8 py-3.5 inline-flex">
-              £4 a week
-            </Link>
+            </ol>
+
+            <p className="text-sm text-slate-500 leading-relaxed max-w-md">
+              Summer storage, placements, travel, between flats — built for how students actually move.
+            </p>
           </div>
 
           <div className="order-1 lg:order-2 flex items-center justify-center lg:justify-end py-4 lg:py-0">
-            <div className="w-full max-w-[90%] flex items-center justify-center">
-              <Image
-                src="/images/Student.png"
-                alt="Student storage"
-                width={1200}
-                height={1200}
-                className="w-full h-auto object-contain object-center"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
+            <div className="relative w-full max-w-[90%]">
+              <span className="pointer-events-none absolute left-[4%] top-[11%] z-10 hidden max-w-[9.5rem] rounded-md border border-slate-200/50 bg-white/55 px-2 py-1 text-center text-[10px] font-medium leading-snug tracking-wide text-slate-600 backdrop-blur-[2px] sm:inline-block">
+                From £2.50 per box
+              </span>
+              <span className="pointer-events-none absolute bottom-[16%] right-[5%] z-10 hidden max-w-[8.5rem] rounded-md border border-slate-200/50 bg-white/55 px-2 py-1 text-center text-[10px] font-medium leading-snug tracking-wide text-slate-600 backdrop-blur-[2px] sm:inline-block">
+                Flexible storage
+              </span>
+              <div className="flex items-center justify-center">
+                <Image
+                  src="/images/Student.png"
+                  alt="Student box storage — collection from university accommodation"
+                  width={1200}
+                  height={1200}
+                  className="w-full h-auto object-contain object-center"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 import { SITE_CONFIG } from "@/lib/config";
+import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta";
 
 export const metadata: Metadata = {
   title: "Mobile Self Storage",
@@ -52,7 +53,13 @@ function LaunchingSoonNote() {
             <Link href="/contact#quote" className="btn-primary px-6 py-3 text-sm">
               Register your interest
             </Link>
-            <a href={SITE_CONFIG.whatsappHref} className="btn-outline px-6 py-3 text-sm">
+            <a
+              href={SITE_CONFIG.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${WHATSAPP_BUTTON_CORE} px-6 py-3 text-sm`}
+            >
+              <WhatsAppMark />
               WhatsApp us
             </a>
           </div>

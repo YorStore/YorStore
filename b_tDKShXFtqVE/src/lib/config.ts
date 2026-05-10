@@ -13,9 +13,8 @@ export const SITE_CONFIG = {
   phoneHref:    "tel:+447368185565",
   email:        "hello@yorstore.co.uk",
   emailHref:    "mailto:hello@yorstore.co.uk",
-  /** Default WhatsApp deep link (prefilled message uses Unicode right single quotation mark in “I’m”). */
-  whatsappHref:
-    "https://wa.me/447368185565?text=Hi%20I%E2%80%99m%20looking%20for%20storage",
+  /** Default WhatsApp deep link */
+  whatsappHref: `https://wa.me/447368185565?text=${encodeURIComponent("Hi Yorstore, I'm looking for storage")}`,
   address:      "Yorkshire, UK",
 
   // ── Meta ─────────────────────────────────────

@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
+import FaqAccordion from "@/components/ui/FaqAccordion";
+
+const BUSINESS_STORAGE_WHATSAPP_HREF = `https://wa.me/447368185565?text=${encodeURIComponent(
+  "Hi Yorstore, I'd like to discuss business storage options."
+)}`;
 
 export const metadata: Metadata = {
   title: "Business Storage",
@@ -17,7 +22,8 @@ export default function BusinessStoragePage() {
         heading="Flexible storage for businesses of all sizes"
         subtext="Need extra space for stock, equipment, or documents? We offer practical, flexible storage for businesses across Yorkshire — just get in touch."
         ctaLabel="Discuss Your Requirements"
-        ctaHref="/contact#quote"
+        ctaHref={BUSINESS_STORAGE_WHATSAPP_HREF}
+        ctaWhatsApp
       />
       <BusinessDetails />
       <CTABand
@@ -25,7 +31,66 @@ export default function BusinessStoragePage() {
         subtext="Every business is different. Get in touch and we'll work out the best solution for you."
         primaryLabel="Get in Touch"
       />
+      <BusinessStorageFaqSection />
       <EnquirySection />
+    </>
+  );
+}
+
+const BUSINESS_STORAGE_FAQ = [
+  {
+    question: "What types of businesses use YORSTORE?",
+    answer:
+      "We support small businesses, online sellers, tradespeople, startups, and local teams who need affordable business storage without taking on a long lease. Typical customers are juggling stock storage, spare equipment, or archive boxes — and want commercial storage that feels straightforward, not corporate-heavy. If you operate in or around York and Yorkshire, we are built for that practical, day-to-day overflow.",
+  },
+  {
+    question: "Can you collect stock, equipment or boxes from our premises?",
+    answer:
+      "Yes, in many cases we can arrange a collection service from your shop, studio, warehouse, or office — packed stock, business inventory storage in crates or boxes, and sensible equipment storage are all common. Tell us what you are moving, access constraints, and timing; we will confirm what works and schedule pickup so your team stays focused on customers, not loading bays.",
+  },
+  {
+    question: "Is business storage flexible if our storage needs change?",
+    answer:
+      "Flexible storage is the point. Seasonal spikes, slower quarters, or a sudden office move all change how much space you need — we adjust where it is practical, with clear communication rather than rigid contracts. Whether you are scaling stock storage up for a launch or winding a project down, we aim to keep commercial storage proportionate and predictable.",
+  },
+  {
+    question: "What can we store with YORSTORE?",
+    answer:
+      "Most teams use us for boxed goods, palletised stock where agreed, tools, seasonal kit, marketing materials, and document archives — essentially business storage for items that belong in secure, organised commercial storage rather than a corridor. Bulky, hazardous, or highly specialised goods may need a different provider; ask upfront and we will be direct about what fits YORSTORE’s model.",
+  },
+  {
+    question: "Why use YORSTORE instead of a traditional storage unit?",
+    answer:
+      "Traditional self-storage can mean van runs, lift queues, and staff time lost to moving stock — our model leans on collection service and local, human coordination so affordable business storage feels closer to an ops partner than a padlock and a postcode. For many small businesses, especially around storage in York and wider Yorkshire, that convenience plus flexible terms is the difference between storage that helps and storage that gets in the way.",
+  },
+] as const;
+
+function BusinessStorageFaqSection() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: BUSINESS_STORAGE_FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <FaqAccordion
+        id="business-storage-faq"
+        eyebrow="FAQ"
+        heading="Business storage questions, answered"
+        items={[...BUSINESS_STORAGE_FAQ]}
+      />
     </>
   );
 }

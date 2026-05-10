@@ -5,6 +5,11 @@ import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 import CrateStorageCarousel from "@/components/ui/CrateStorageCarousel";
+import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta";
+
+const CRATE_STORAGE_WHATSAPP_QUOTE_HREF = `https://wa.me/447368185565?text=${encodeURIComponent(
+  "Hi Yorstore, I'd like a quote for crate storage."
+)}`;
 
 export const metadata: Metadata = {
   title: "Crate Storage",
@@ -54,7 +59,15 @@ function WhatIsCrateStorage() {
             <p className="text-slate-600 leading-relaxed mb-8">
               When you need your belongings back, just let us know and we'll arrange a convenient time to return them.
             </p>
-            <Link href="/contact#quote" className="btn-primary px-8 py-3.5">Get a Quote</Link>
+            <a
+              href={CRATE_STORAGE_WHATSAPP_QUOTE_HREF}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${WHATSAPP_BUTTON_CORE} px-8 py-3.5`}
+            >
+              <WhatsAppMark />
+              Get a Quote
+            </a>
           </div>
 
           <div className="aspect-[4/3] rounded-3xl relative overflow-hidden">
