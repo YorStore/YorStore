@@ -9,7 +9,7 @@ import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta"
 export const metadata: Metadata = {
   title: "Mobile Self Storage",
   description:
-    "Mobile self storage in Yorkshire: storage unit or trailer to your door. Self-load or we load. Flexible, secure — trailer service launching soon.",
+    "Mobile self storage across Leeds, Harrogate and the Wharfe Valley: unit or trailer to your door. Flexible, secure collection and delivery — trailer service launching soon.",
 };
 
 export default function MobileSelfStoragePage() {
@@ -18,7 +18,7 @@ export default function MobileSelfStoragePage() {
       <PageHero
         label="Our main service"
         heading="Mobile Self Storage"
-        subtext="The unit comes to you. Self-load or full load service — your call."
+        subtext="Storage made simple. The unit comes to you — load at your pace, or we load for you."
         ctaLabel="Get a Free Quote"
         ctaHref="/contact#quote"
       />
@@ -28,7 +28,7 @@ export default function MobileSelfStoragePage() {
       <WhoIsItFor />
       <CTABand
         heading="Interested in mobile self storage?"
-        subtext="We walk you through options plainly — no jargon, no pressure."
+        subtext="Flexible, secure storage brought to your door. You load — or we can load it for you."
       />
       <EnquirySection />
     </>
@@ -44,10 +44,11 @@ function LaunchingSoonNote() {
             Launching Soon
           </span>
           <h2 className="mt-4 text-2xl md:text-3xl font-extrabold text-brand-navy">
-            Mobile trailer storage is coming to Yorkshire
+            Mobile trailer storage is on the way
           </h2>
-          <p className="mt-4 text-slate-700 leading-relaxed max-w-[650px] mx-auto">
-            Full trailer-based mobile self storage is in preparation. Crate, student, and business storage are live now across Yorkshire.
+          <p className="mt-4 text-slate-700 leading-relaxed max-w-[650px] mx-auto text-sm md:text-base">
+            Full trailer-based mobile self storage is in preparation. Crate, student and business storage
+            are live now — Wharfe Valley, Leeds, Harrogate and wider West Yorkshire.
           </p>
           <div className="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/contact#quote" className="btn-primary px-6 py-3 text-sm">

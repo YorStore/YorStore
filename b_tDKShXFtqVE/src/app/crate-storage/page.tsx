@@ -14,16 +14,16 @@ const CRATE_STORAGE_WHATSAPP_QUOTE_HREF = `https://wa.me/447368185565?text=${enc
 export const metadata: Metadata = {
   title: "Crate Storage",
   description:
-    "Affordable crate storage in Yorkshire: robust crates, secure facility, collection service. Practical when you do not need daily access.",
+    "Crate storage in Leeds, Harrogate and the Wharfe Valley: robust crates, secure West Yorkshire facility, collection and delivery. Practical when you do not need daily access.",
 };
 
 export default function CrateStoragePage() {
   return (
     <>
       <PageHero
-        label="Crate storage"
-        heading="Secure crate storage — simple and cost-effective"
-        subtext="Robust crates, secure facility, sensible pricing — ideal when you do not need a full self-storage unit."
+        label="Containerised crate storage"
+        heading="Practical & Affordable"
+        subtext="Belongings packed, stacked and securely stored at our facility — often better value than a full self-storage unit."
         ctaLabel="Enquire Now"
         ctaHref="/contact#quote"
       />
@@ -32,7 +32,7 @@ export default function CrateStoragePage() {
       <CrateBenefits />
       <CTABand
         heading="Want to know more about crate storage?"
-        subtext="Message us — we explain options and quote with no obligation."
+        subtext="Flexible, secure storage — we explain options and quote with no obligation."
       />
       <EnquirySection />
     </>
@@ -48,11 +48,13 @@ function WhatIsCrateStorage() {
           <div>
             <span className="text-xs font-semibold text-brand-blue uppercase tracking-widest block mb-3">How it works</span>
             <h2 className="text-3xl font-extrabold text-brand-navy mb-4">What is crate storage?</h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Items go into secure, stackable crates at our facility — affordable crate storage when you do not need constant access, often cheaper than a full unit.
+            <p className="text-slate-600 leading-relaxed mb-4 text-sm md:text-base">
+              Crate storage with belongings packed, stacked and securely stored at the Yorstore facility.
+              Ideal when constant access is not required — often more cost effective than traditional self-storage.
             </p>
-            <p className="text-slate-600 leading-relaxed mb-8">
-              Need things back? Tell us and we arrange return — collection service available across Yorkshire.
+            <p className="text-slate-600 leading-relaxed mb-8 text-sm md:text-base">
+              Need things back? Tell us and we arrange return — collection and delivery across Leeds, Harrogate,
+              the Wharfe Valley and wider West Yorkshire.
             </p>
             <a
               href={CRATE_STORAGE_WHATSAPP_QUOTE_HREF}
@@ -121,12 +123,12 @@ function WhatFitsInACrate() {
 /* ── Benefits ───────────────────────────────── */
 function CrateBenefits() {
   const benefits = [
+    { title: "Robust crates",     desc: "Stacked and stored securely in our West Yorkshire facility." },
     { title: "Cost-efficient",     desc: "Often beats a full self-storage unit when volume is modest." },
-    { title: "Secure",             desc: "Robust crates in our facility — not ad-hoc garage space." },
+    { title: "Secure",             desc: "Facility storage — not a spare garage or shed." },
     { title: "Organised",          desc: "Packed and inventoried so you know what is where." },
     { title: "Flexible duration",  desc: "Short jobs or long stays — no long lock-in." },
-    { title: "Easy retrieval",     desc: "Request a return; we schedule delivery." },
-    { title: "No van hire needed", desc: "We can collect — fewer van-and-lift days for you." },
+    { title: "Re-delivery",        desc: "Request a return; we schedule collection and delivery." },
   ];
 
   return (

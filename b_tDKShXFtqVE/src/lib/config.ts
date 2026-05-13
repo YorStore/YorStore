@@ -22,10 +22,10 @@ export const SITE_CONFIG = {
   // ── Meta ─────────────────────────────────────
   siteUrl:      "https://yorstore.co.uk",
   description:
-    "Yorkshire storage collected from your door: mobile self storage, crate storage, student and business storage. Flexible, affordable, local — you load or we load.",
+    "Mobile self storage, crate storage, student and business storage collected from your door across the Wharfe Valley, Leeds, Harrogate and wider West Yorkshire. Flexible, secure — you load or we load.",
   /** Open Graph / Twitter card description (link previews) */
   socialDescription:
-    "Mobile self storage, student storage and business storage brought directly to your door.",
+    "Storage made simple: mobile self storage, crate storage and business storage — collection and delivery across Leeds, Harrogate and the Wharfe Valley.",
 } as const;
 
 export const NAV_LINKS = [

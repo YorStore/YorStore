@@ -13,7 +13,7 @@ export default function Footer() {
           {/* Brand column — wider */}
           <div className="md:col-span-5">
             <p className="text-blue-200/70 text-sm leading-relaxed max-w-xs mb-6">
-              Flexible, secure, local storage across Yorkshire.
+              Flexible, secure storage across the Wharfe Valley, Leeds, Harrogate and wider West Yorkshire.
               We come to you — you load, or we load for you.
             </p>
             <div className="flex flex-col gap-2.5">
@@ -88,7 +88,7 @@ export default function Footer() {
             </ul>
             <div className="mt-6 p-3 rounded-xl bg-white/5 border border-white/10">
               <p className="text-xs text-blue-200/50">{SITE_CONFIG.address}</p>
-              <p className="text-xs text-blue-200/50 mt-0.5">Serving Yorkshire</p>
+              <p className="text-xs text-blue-200/50 mt-0.5">Leeds · Harrogate · Wharfe Valley</p>
             </div>
           </div>
         </div>

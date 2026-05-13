@@ -11,7 +11,7 @@ const BUSINESS_STORAGE_WHATSAPP_HREF = `https://wa.me/447368185565?text=${encode
 export const metadata: Metadata = {
   title: "Business Storage",
   description:
-    "Business and commercial storage in Yorkshire: stock, equipment, archives. Collection service, flexible terms, sensible pricing for small teams.",
+    "Business and commercial storage in Leeds, Harrogate and West Yorkshire: stock, equipment, archives. Flexible terms, secure storage and collection where it suits you.",
 };
 
 export default function BusinessStoragePage() {
@@ -20,7 +20,7 @@ export default function BusinessStoragePage() {
       <PageHero
         label="Business storage"
         heading="Flexible storage for businesses of all sizes"
-        subtext="Overflow stock, tools, archives — flexible business storage across Yorkshire with collection where it suits you."
+        subtext="Overflow stock, tools, archives — flexible business storage across the Wharfe Valley, Leeds and Harrogate, with collection where it suits you."
         ctaLabel="Discuss Your Requirements"
         ctaHref={BUSINESS_STORAGE_WHATSAPP_HREF}
         ctaWhatsApp
@@ -28,7 +28,7 @@ export default function BusinessStoragePage() {
       <BusinessDetails />
       <CTABand
         heading="Tell us what your business needs"
-        subtext="Every setup differs — we propose storage that fits volume and budget."
+        subtext="Flexible, secure storage brought to your door — we propose options that fit volume and budget."
         primaryLabel="Get in touch"
       />
       <BusinessStorageFaqSection />

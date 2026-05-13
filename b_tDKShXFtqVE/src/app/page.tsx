@@ -5,8 +5,9 @@ import { SITE_CONFIG } from "@/lib/config";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage Yorkshire`,
-  description: SITE_CONFIG.description,
+  title: `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage — Leeds, Harrogate & Wharfe Valley`,
+  description:
+    "Flexible mobile self storage, student storage and business storage collected from your door across the Wharfe Valley, Leeds, Harrogate and wider West Yorkshire. Secure storage — you load, or we load for you.",
 };
 
 export default function HomePage() {
@@ -31,13 +32,14 @@ function AvailabilityStrip() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-center">
           <p className="text-sm font-medium text-brand-navy">
             <Link href="/student-storage" className="text-brand-blue hover:underline">
-              Student Storage
+              Student storage
             </Link>{" "}
-            and{" "}
+            for Leeds, Headingley, Horsforth and university accommodation, plus{" "}
             <Link href="/business-storage" className="text-brand-blue hover:underline">
-              Business Storage
+              business storage
             </Link>{" "}
-            now available across Yorkshire. Full mobile self storage trailer service{" "}
+            — covering the Wharfe Valley, Leeds, Harrogate and the wider area. Full{" "}
+            <span className="whitespace-nowrap">mobile self storage</span> trailer service{" "}
             <span className="font-semibold text-brand-blue">launching soon</span> —{" "}
             <Link href="/contact#quote" className="font-semibold text-brand-blue hover:underline">
               enquire now for early access
@@ -68,7 +70,7 @@ function HeroSection() {
           <div>
             <span className="inline-flex items-center gap-2 text-xs font-semibold text-blue-300 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full uppercase tracking-widest mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block" />
-              Yorkshire's Mobile Storage Specialists
+              Mobile Storage Specialists
             </span>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.1] mb-6">
@@ -79,11 +81,11 @@ function HeroSection() {
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100/80 leading-relaxed mb-8 max-w-lg">
-              Storage brought to your door across Yorkshire and beyond.
-              You load — or we load for you. Flexible, secure, local.
+              Storage brought to your door. You load, or we can load it for you. Convenient,
+              flexible and secure — covering the Wharfe Valley, Leeds, Harrogate and the wider area.
             </p>
             <p className="text-sm text-blue-200/70 mb-5 max-w-lg">
-              Trailer-based mobile self storage launching soon.
+              Trailer-based mobile self storage launching soon. Storage made simple.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
@@ -102,8 +104,8 @@ function HeroSection() {
               </a>
             </div>
 
-            <p className="text-sm text-blue-200/60 font-medium">
-              No obligation &nbsp;·&nbsp; Quick response &nbsp;·&nbsp; Local team
+            <p className="text-xs sm:text-sm text-blue-200/50 font-medium tracking-wide">
+              No obligation · Quick response · Friendly, reliable team
             </p>
           </div>
 
@@ -112,7 +114,7 @@ function HeroSection() {
             <div className="aspect-[4/3] rounded-3xl bg-transparent flex flex-col items-center justify-center text-center p-8 overflow-hidden">
               <Image
                 src="/images/HPH.png"
-                alt="Yorkshire mobile self storage — unit at your door"
+                alt="Mobile self storage unit at your door — Leeds, Harrogate and Wharfe Valley"
                 fill
                 className="object-contain scale-110"
                 style={{ objectPosition: "center 90%" }}
@@ -121,7 +123,7 @@ function HeroSection() {
               {/* Corner label */}
               <div className="absolute bottom-4 left-4 z-10 bg-white/10 border border-white/20 backdrop-blur-sm rounded-xl px-3 py-2">
                 <p className="text-xs font-semibold text-white">We come to you</p>
-                <p className="text-xs text-blue-200/70">Yorkshire-wide delivery</p>
+                <p className="text-xs text-blue-200/70">Leeds, Harrogate &amp; beyond</p>
               </div>
             </div>
           </div>
@@ -139,10 +141,10 @@ function HeroSection() {
 ───────────────────────────────────────────────────────── */
 function TrustBar() {
   const items = [
-    { icon: <TruckIcon />,    label: "We Come to You"      },
-    { icon: <LockIcon />,     label: "Secure Storage"      },
-    { icon: <PeopleIcon />,   label: "Local & Friendly"    },
-    { icon: <PoundIcon />,    label: "Competitive Pricing" },
+    { icon: <TruckIcon />,  label: "We Come to You" },
+    { icon: <LockIcon />,   label: "Secure Storage" },
+    { icon: <PoundIcon />,  label: "Cost Effective" },
+    { icon: <FlexIconSm />, label: "Flexible Terms" },
   ];
 
   return (
@@ -173,40 +175,40 @@ function HowItWorks() {
   const steps = [
     {
       num: "01",
-      title: "Get in touch",
-      benefit: "Quick & easy",
-      desc: "Call or send a short enquiry. Tell us what you need — we'll sort the rest.",
+      title: "Get in Touch",
+      benefit: "Quick & Easy",
+      desc: "Call or send an enquiry and tell us what you need.",
     },
     {
       num: "02",
-      title: "We deliver to your door",
-      benefit: "No van hire needed",
-      desc: "We bring the storage unit or trailer straight to your property at a time that suits you.",
+      title: "We Deliver to Your Door",
+      benefit: "Let the Storage Come to You",
+      desc: "We bring the storage unit to your home, business or accommodation at a convenient time.",
     },
     {
       num: "03",
-      title: "You load — or we do",
-      benefit: "Your choice",
-      desc: "Take your time loading yourself, or let our team handle it. Completely flexible.",
+      title: "You Load — or We Can Do it For You",
+      benefit: "Your Choice",
+      desc: "Load at your own pace or let our experienced team handle everything.",
     },
     {
       num: "04",
-      title: "Safe & secure storage",
-      benefit: "Fully insured",
-      desc: "We collect and store everything securely. Retrieval whenever you need it.",
+      title: "Safe & Secure Storage",
+      benefit: "We Store it For You",
+      desc: "We collect and securely store your belongings, then return them whenever you need them back.",
     },
   ];
 
   return (
     <section className="bg-brand-navy section-pad">
       <div className="container-site">
-        <div className="text-center mb-14">
-          <span className="eyebrow text-blue-400 mb-3 block">Simple process</span>
+        <div className="text-center mb-10 md:mb-12">
+          <span className="eyebrow text-blue-400 mb-3 block">Simple Process</span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-3">
-            How it works
+            How it Works
           </h2>
-          <p className="text-blue-200/70 max-w-xl mx-auto">
-            From enquiry to secure storage in four steps — minimal fuss, clear logistics.
+          <p className="text-blue-200/70 max-w-xl mx-auto text-sm md:text-base leading-relaxed">
+            From initial enquiry to secure storage. Storage made simple with Yorstore.
           </p>
         </div>
 
@@ -214,19 +216,19 @@ function HowItWorks() {
           {steps.map((step, i) => (
             <div
               key={step.num}
-              className="relative bg-white/8 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors"
+              className="relative bg-white/8 border border-white/10 rounded-2xl p-5 md:p-6 hover:border-white/20 transition-colors"
             >
               {/* Step number */}
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-3">
                 <span className="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
                   {step.num}
                 </span>
-                <span className="text-xs font-semibold text-blue-400 bg-blue-400/10 border border-blue-400/20 px-2.5 py-1 rounded-full">
+                <span className="text-[11px] sm:text-xs font-semibold text-blue-400 bg-blue-400/10 border border-blue-400/20 px-2.5 py-1 rounded-full leading-snug max-w-full w-fit">
                   {step.benefit}
                 </span>
               </div>
 
-              <h3 className="font-bold text-white text-base mb-2">{step.title}</h3>
+              <h3 className="font-bold text-white text-[15px] md:text-base mb-2 leading-snug">{step.title}</h3>
               <p className="text-sm text-blue-200/60 leading-relaxed">{step.desc}</p>
 
               {/* Connector arrow for desktop */}
@@ -248,9 +250,11 @@ function HowItWorks() {
 ───────────────────────────────────────────────────────── */
 function MobileStorageFeature() {
   const points = [
-    "Unit or trailer delivered to your property",
-    "Self-load on your schedule — or we load for you",
-    "We collect and store securely; retrieve when you need it",
+    "Mobile self storage that comes to you",
+    "Storage unit delivered to your door",
+    "Load at your convenience — or we can load it for you",
+    "We collect and securely store everything",
+    "Re-delivery when you need it back",
   ];
 
   return (
@@ -264,7 +268,7 @@ function MobileStorageFeature() {
               <div className="relative z-0 w-full h-full min-h-[220px]">
                 <Image
                   src="/images/Trailer2TBC.png"
-                  alt="Mobile self storage trailer at customer's property"
+                  alt="Mobile self storage trailer — Leeds, Harrogate and Wharfe Valley"
                   fill
                   className="object-contain object-center mix-blend-multiply scale-[1.28]"
                   sizes="(min-width: 1024px) 40vw, 90vw"
@@ -275,13 +279,10 @@ function MobileStorageFeature() {
 
           {/* Content */}
           <div className="order-1 lg:order-2">
-            <span className="eyebrow text-brand-blue mb-3 block">Our headline service</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4 leading-tight">
-              Mobile Self Storage —<br />storage made easy
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-3 leading-tight">
+              Mobile Self Storage
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-7">
-              Skip the van and the depot. Mobile self storage comes to you in Yorkshire — you stay in control of how much we handle.
-            </p>
+            <p className="text-lg font-semibold text-brand-blue mb-6">Storage made simple.</p>
 
             <ul className="flex flex-col gap-3 mb-8">
               {points.map((p) => (
@@ -314,10 +315,10 @@ function MobileStorageFeature() {
 ───────────────────────────────────────────────────────── */
 function CrateStorageFeature() {
   const points = [
-    "Robust crates, stacked and stored in our facility",
+    "Robust crates stacked and stored securely",
     "Often better value than a full self-storage unit",
-    "Secure storage — not a spare garage",
-    "Retrieval when you need it — just say when",
+    "Secure facility storage — not a spare garage or shed",
+    "Re-delivery available whenever needed",
   ];
 
   return (
@@ -327,12 +328,14 @@ function CrateStorageFeature() {
 
           {/* Content */}
           <div>
-            <span className="eyebrow text-brand-blue mb-3 block">Secure & cost-effective</span>
+            <span className="eyebrow text-brand-blue mb-3 block">Secure &amp; cost-effective</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4 leading-tight">
-              Crate Storage —<br />practical and affordable
+              Containerised Crate Storage —<br />
+              practical and affordable
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-7">
-              Crate storage: your things packed, stacked, and kept in our facility. Ideal when you do not need constant access — and usually easier on the budget than a full unit.
+            <p className="text-slate-600 leading-relaxed mb-7 text-sm md:text-base">
+              Belongings packed, stacked and stored securely at the Yorstore facility. Ideal when regular
+              access is not required — often better value than traditional self-storage.
             </p>
 
             <ul className="flex flex-col gap-3 mb-8">
@@ -362,7 +365,7 @@ function CrateStorageFeature() {
               <div className="relative z-0 w-full h-full min-h-[220px]">
                 <Image
                   src="/images/TrailerTBC.png"
-                  alt="Storage trailer illustration"
+                  alt="Crate storage — Leeds, Harrogate and Wharfe Valley"
                   fill
                   className="object-contain object-center mix-blend-multiply scale-[1.28]"
                   sizes="(min-width: 1024px) 40vw, 90vw"
@@ -383,23 +386,23 @@ function WhyChooseUs() {
   const reasons = [
     {
       icon: <ShieldIcon />,
-      title: "Secure & insured",
-      desc:  "Your items are stored with care — we treat that duty seriously.",
+      title: "Safe & Secure",
+      desc: "Your belongings are handled with care and stored securely.",
     },
     {
-      icon: <CalendarIcon />,
-      title: "No long contracts",
-      desc:  "Store for as long as you need — short or long term, no lock-ins.",
-    },
-    {
-      icon: <PeopleIcon />,
-      title: "Local team",
-      desc:  "We're a Yorkshire business. Real people, straight answers, no fuss.",
+      icon: <TruckIconLg />,
+      title: "Collection & Delivery",
+      desc: "Flexible collection and return times that work around you.",
     },
     {
       icon: <FlexIcon />,
-      title: "Flexible access",
-      desc:  "Need items back? Tell us and we will arrange delivery.",
+      title: "Flexible Arrangements",
+      desc: "Short or long-term storage with flexible terms.",
+    },
+    {
+      icon: <PeopleIconLg />,
+      title: "Local, Experienced Team",
+      desc: "Friendly, reliable people making storage simple.",
     },
   ];
 
@@ -407,10 +410,8 @@ function WhyChooseUs() {
     <section className="section-pad bg-brand-navy">
       <div className="container-site">
         <div className="text-center mb-12">
-          <span className="eyebrow text-blue-400 mb-3 block">Why YORSTORE</span>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white">
-            Storage made simple
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">Why Yorstore</h2>
+          <p className="text-blue-200/70 text-sm md:text-base">Storage made simple.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -444,14 +445,23 @@ function QuoteSection() {
     <section id="quote" className="section-pad bg-brand-blue-xlt">
       <div className="container-site">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <span className="eyebrow text-brand-blue mb-3 block">Get started</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-3">
+          <div className="mb-10">
+            <span className="eyebrow text-brand-blue mb-3 block text-center">Get started</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4 text-center">
               Get a free quote
             </h2>
-            <p className="text-slate-500">
-              Tell us what you need — we reply fast, with no pressure to commit.
-            </p>
+            <div className="max-w-xl mx-auto space-y-3">
+              <p className="text-slate-600 text-sm md:text-base leading-relaxed text-center md:text-left">
+                Flexible, secure storage brought to your door. You load — or we can load it for you.
+              </p>
+              <p className="text-slate-500 text-sm leading-relaxed text-center md:text-left">
+                Mobile self storage, crate storage and business storage — Wharfe Valley, Leeds,
+                Harrogate and wider West Yorkshire. Fast replies, no pressure to commit.
+              </p>
+              <p className="text-xs text-slate-400 tracking-wide text-center md:text-right pt-1">
+                Convenient • Flexible • Secure
+              </p>
+            </div>
           </div>
 
           <div className="card shadow-md">
@@ -493,7 +503,7 @@ function TruckIcon() {
 }
 function TruckIconLg() {
   return (
-    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 4v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
     </svg>
   );
@@ -512,6 +522,16 @@ function PeopleIcon() {
     </svg>
   );
 }
+function PeopleIconLg() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 00-3-3.87" />
+      <path d="M16 3.13a4 4 0 010 7.75" />
+    </svg>
+  );
+}
 function PoundIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -526,17 +546,20 @@ function ShieldIcon() {
     </svg>
   );
 }
-function CalendarIcon() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-    </svg>
-  );
-}
 function FlexIcon() {
   return (
     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/>
+    </svg>
+  );
+}
+function FlexIconSm() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="17 1 21 5 17 9" />
+      <path d="M3 11V9a4 4 0 014-4h14" />
+      <polyline points="7 23 3 19 7 15" />
+      <path d="M21 13v2a4 4 0 01-4 4H3" />
     </svg>
   );
 }

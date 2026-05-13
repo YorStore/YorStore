@@ -8,7 +8,7 @@ import FaqAccordion from "@/components/ui/FaqAccordion";
 export const metadata: Metadata = {
   title: "Student & Box Storage",
   description:
-    "Student and box storage in Yorkshire: collection from your door, per-box pricing, summer and term-time flexible storage. York and wider region.",
+    "Student and box storage in Leeds, Headingley, Horsforth and wider West Yorkshire: collection from your door, per-box pricing, flexible summer and term-time storage.",
 };
 
 export default function StudentStoragePage() {
@@ -36,7 +36,7 @@ export default function StudentStoragePage() {
       <WhoIsItFor />
       <CTABand
         heading="Need student or box storage?"
-        subtext="We size a simple, affordable plan — message or call."
+        subtext="Flexible, secure storage — we size a simple plan for Leeds, Headingley, Horsforth and beyond."
       />
       <StudentStorageFaqSection />
       <EnquirySection />

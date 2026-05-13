@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/config";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Contact YORSTORE for storage in Yorkshire: call, email, WhatsApp, or send an enquiry. Fast replies, no obligation.",
+    "Contact Yorstore for mobile self storage, crate storage and business storage across Leeds, Harrogate and the Wharfe Valley — call, email, WhatsApp or send an enquiry. Fast replies, no obligation.",
 };
 
 export default function ContactPage() {
@@ -53,7 +53,7 @@ function ContactSection() {
       title: "Based in",
       detail: SITE_CONFIG.address,
       href:   null,
-      note:   "Serving Yorkshire",
+      note:   "Wharfe Valley, Leeds, Harrogate & wider West Yorkshire",
       fullCard: false as const,
     },
   ];

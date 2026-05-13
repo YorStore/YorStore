@@ -10,7 +10,7 @@ interface CTABandProps {
 
 export default function CTABand({
   heading      = "Ready to get started?",
-  subtext      = "Get in touch today for a free, no-obligation quote.",
+  subtext      = "Flexible, secure storage brought to your door — you load, or we can load it for you.",
   primaryLabel = "Get a Free Quote",
   primaryHref  = "/contact#quote",
 }: CTABandProps) {

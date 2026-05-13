@@ -5,7 +5,7 @@ import PageHero from "@/components/ui/PageHero";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Local Yorkshire storage: mobile self storage, crates, student and business options. Straight answers, flexible terms, collection from your door.",
+    "Local storage across the Wharfe Valley, Leeds and Harrogate: mobile self storage, crate storage, student and business options. Straight answers, flexible terms, collection from your door.",
 };
 
 export default function AboutPage() {
@@ -14,7 +14,7 @@ export default function AboutPage() {
       <PageHero
         label="About YORSTORE"
         heading="Local, friendly, and straight-talking storage"
-        subtext="Yorkshire storage, built on simplicity and straight answers — no jargon, no runaround."
+        subtext="Storage made simple — built on straight answers, not jargon or runaround."
       />
       <OurStory />
       <OurValues />
@@ -35,7 +35,7 @@ function OurStory() {
         <h2 className="text-3xl font-extrabold text-brand-navy mb-6">A local team with a simple mission</h2>
         <div className="space-y-5 text-slate-600 leading-relaxed">
           <p>
-            YORSTORE serves Yorkshire with storage that feels simpler than the old model: flexible, affordable collection service, less time lost to vans and depots.
+            YORSTORE serves the Wharfe Valley, Leeds, Harrogate and wider West Yorkshire with storage that feels simpler than the old model: flexible collection and delivery, less time lost to vans and depots.
           </p>
           <p>
             Mobile self storage is our headline offer — a unit or trailer to your door. You self-load or we load. We also run crate storage, student and box storage, and practical options for small businesses.
@@ -56,7 +56,7 @@ function OurValues() {
     { title: "Flexible",     desc: "Store short-term or long-term — terms that match real life." },
     { title: "Secure",       desc: "Safe storage, handled with care." },
     { title: "Honest",       desc: "Clear quotes, no surprise add-ons." },
-    { title: "Local",        desc: "Yorkshire team, Yorkshire customers." },
+    { title: "Local",        desc: "Leeds, Harrogate and the Wharfe Valley — real people, local answers." },
     { title: "Friendly",     desc: "Easy to reach, quick to help." },
   ];
 

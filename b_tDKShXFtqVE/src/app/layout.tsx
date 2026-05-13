@@ -13,7 +13,7 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const defaultTitle = `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage Yorkshire`;
+const defaultTitle = `${SITE_CONFIG.brandDisplayName} | Mobile Self Storage — Leeds, Harrogate & Wharfe Valley`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
