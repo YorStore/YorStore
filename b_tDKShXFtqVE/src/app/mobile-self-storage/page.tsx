@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 import { SITE_CONFIG } from "@/lib/config";
+import { whatsappHref } from "@/lib/whatsapp";
 import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta";
 
 export const metadata: Metadata = {
@@ -19,8 +20,11 @@ export default function MobileSelfStoragePage() {
         label="Our main service"
         heading="Mobile Self Storage"
         subtext="Storage made simple. The unit comes to you — load at your pace, or we load for you."
-        ctaLabel="Get a Free Quote"
-        ctaHref="/contact#quote"
+        whatsappCta={{
+          href: whatsappHref("Hi Yorstore, I'm looking for mobile self storage"),
+          label: "Message us on WhatsApp",
+        }}
+        secondaryCta={{ href: "/contact#quote", label: "Get a Free Quote" }}
       />
       <LaunchingSoonNote />
       <HowMobileWorks />

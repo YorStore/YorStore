@@ -3,10 +3,11 @@ import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import { whatsappHref } from "@/lib/whatsapp";
 
-const BUSINESS_STORAGE_WHATSAPP_HREF = `https://wa.me/447368185565?text=${encodeURIComponent(
+const BUSINESS_STORAGE_WHATSAPP_HREF = whatsappHref(
   "Hi Yorstore, I'd like to discuss business storage options."
-)}`;
+);
 
 export const metadata: Metadata = {
   title: "Business Storage",
@@ -19,11 +20,13 @@ export default function BusinessStoragePage() {
     <>
       <PageHero
         label="Business storage"
-        heading="Flexible storage for businesses of all sizes"
-        subtext="Overflow stock, tools, archives — flexible business storage across the Wharfe Valley, Leeds and Harrogate, with collection where it suits you."
-        ctaLabel="Discuss Your Requirements"
-        ctaHref={BUSINESS_STORAGE_WHATSAPP_HREF}
-        ctaWhatsApp
+        heading="Business Storage"
+        subtext="Flexible storage for stock, tools and archives across Leeds, Harrogate and the Wharfe Valley."
+        whatsappCta={{
+          href: BUSINESS_STORAGE_WHATSAPP_HREF,
+          label: "Discuss on WhatsApp",
+        }}
+        secondaryCta={{ href: "/contact#quote", label: "Get a Quote" }}
       />
       <BusinessDetails />
       <CTABand

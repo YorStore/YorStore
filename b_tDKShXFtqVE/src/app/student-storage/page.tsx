@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/ui/CTABand";
 import EnquiryForm from "@/components/ui/EnquiryForm";
 import FaqAccordion from "@/components/ui/FaqAccordion";
+import { whatsappHref } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Student & Box Storage",
@@ -16,21 +17,13 @@ export default function StudentStoragePage() {
     <>
       <PageHero
         label="Student storage"
-        heading="We collect from your door. You skip the van and the storage unit."
-        subtext="Per-box weekly rates, collection from your door — built for summer, hand-in week, or a few months away."
-        bullets={[
-          "Pickup at your hall, house, or flat — no self-storage runarounds.",
-          "Simple per-box pricing — premium feel, student-sensible numbers.",
-          "Built for term-time chaos: travel, switching flats, or heading home.",
-        ]}
-        pricingLine="Starting from £2.50 per box per week"
-        ctaLabel="Get a Quote"
-        ctaHref="/contact#quote"
-        whatsapp={{
-          href: `https://wa.me/447368185565?text=${encodeURIComponent("Hi Yorstore, I'm looking for student storage")}`,
-          label: "Get a quick quote on WhatsApp",
-          supportingText: "No forms. Just message us.",
+        heading="Student & Box Storage"
+        subtext="Collection from your door in Leeds, Headingley and Horsforth — simple per-box storage for summer and term-time."
+        whatsappCta={{
+          href: whatsappHref("Hi Yorstore, I'm looking for student storage"),
+          label: "Quick quote on WhatsApp",
         }}
+        secondaryCta={{ href: "/contact#quote", label: "Get a Quote" }}
       />
       <StudentDetails />
       <WhoIsItFor />

@@ -7,9 +7,11 @@ import EnquiryForm from "@/components/ui/EnquiryForm";
 import CrateStorageCarousel from "@/components/ui/CrateStorageCarousel";
 import { WHATSAPP_BUTTON_CORE, WhatsAppMark } from "@/components/ui/WhatsAppCta";
 
-const CRATE_STORAGE_WHATSAPP_QUOTE_HREF = `https://wa.me/447368185565?text=${encodeURIComponent(
+import { whatsappHref } from "@/lib/whatsapp";
+
+const CRATE_STORAGE_WHATSAPP_QUOTE_HREF = whatsappHref(
   "Hi Yorstore, I'd like a quote for crate storage."
-)}`;
+);
 
 export const metadata: Metadata = {
   title: "Crate Storage",
@@ -22,10 +24,13 @@ export default function CrateStoragePage() {
     <>
       <PageHero
         label="Containerised crate storage"
-        heading="Practical & Affordable"
-        subtext="Belongings packed, stacked and securely stored at our facility — often better value than a full self-storage unit."
-        ctaLabel="Enquire Now"
-        ctaHref="/contact#quote"
+        heading="Crate Storage"
+        subtext="Packed, stacked and stored securely — often better value than a full self-storage unit."
+        whatsappCta={{
+          href: CRATE_STORAGE_WHATSAPP_QUOTE_HREF,
+          label: "Message us on WhatsApp",
+        }}
+        secondaryCta={{ href: "/contact#quote", label: "Enquire Now" }}
       />
       <WhatIsCrateStorage />
       <WhatFitsInACrate />
