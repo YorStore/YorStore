@@ -1,4 +1,4 @@
-export const ENQUIRY_TO_EMAIL = "hello@yorstore.co.uk";
+export const ENQUIRY_TO_EMAIL = "info@yorstore.co.uk";
 
 export type EnquiryPayload = {
   name: string;
