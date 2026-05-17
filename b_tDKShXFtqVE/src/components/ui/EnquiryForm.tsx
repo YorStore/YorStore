@@ -48,6 +48,7 @@ export default function EnquiryForm({ subject = "General Enquiry", compact = fal
         return;
       }
 
+      setSending(false);
       setSent(true);
     } catch {
       setError("We could not send your enquiry. Please check your connection and try again.");
@@ -159,7 +160,9 @@ function EnquirySuccess() {
       <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
         <CheckIcon />
       </div>
-      <h3 className="text-lg font-bold text-slate-800 mb-1">Thanks — we&apos;ll be in touch!</h3>
+      <h3 className="text-lg font-bold text-slate-800 mb-1">
+        Thanks — we&apos;ve received your enquiry and will get back to you shortly.
+      </h3>
       <p className="text-slate-500 text-sm">We aim to respond within a few hours during business hours.</p>
     </div>
   );
