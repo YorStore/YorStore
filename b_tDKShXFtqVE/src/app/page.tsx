@@ -330,8 +330,9 @@ function CrateStorageFeature() {
           <div>
             <span className="eyebrow text-brand-blue mb-3 block">Secure &amp; cost-effective</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4 leading-tight">
-              Containerised Crate Storage —<br />
-              practical and affordable
+              Containerised Crate Storage
+              <br />
+              Practical and affordable
             </h2>
             <p className="text-slate-600 leading-relaxed mb-7 text-sm md:text-base">
               Belongings packed, stacked and stored securely at the Yorstore facility. Ideal when regular
